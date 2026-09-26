@@ -1,0 +1,14 @@
+{
+  "name": "@present/placemats",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A4 placemats with a question in each corner and dinner in the middle.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

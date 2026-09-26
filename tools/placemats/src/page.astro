@@ -1,0 +1,57 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Table Talk Placemats" description="A4 placemats with a question in each corner and dinner in the middle." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Table Talk Placemats</p>
+      <h1 class="display text-4xl sm:text-5xl">A question in every corner.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">A4 landscape. Four questions around the edge, your plate in the middle. Print one per seat.</p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-[1fr_minmax(0,20rem)] md:items-start">
+      <div>
+        <p class="eyebrow mb-3">Preview · mat 1</p>
+        <div id="mat" class="relative aspect-[297/210] rounded-lg shadow-soft p-[5%] text-[2.2cqw] leading-snug" style="container-type:inline-size;background:#fbf8f2;color:#2b2823">
+          <p class="absolute top-[7%] left-[6%] w-[36%]" data-q="0"></p>
+          <p class="absolute top-[7%] right-[6%] w-[36%] text-right" data-q="1"></p>
+          <p class="absolute bottom-[7%] left-[6%] w-[36%]" data-q="2"></p>
+          <p class="absolute bottom-[7%] right-[6%] w-[36%] text-right" data-q="3"></p>
+          <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[52%] aspect-square rounded-full" data-bind="plate" style="background:#e3ebe2"></div>
+        </div>
+      </div>
+      <form class="flex flex-col gap-6" autocomplete="off" id="f">
+        <fieldset>
+          <legend class="eyebrow mb-2">Depth</legend>
+          <div class="grid grid-cols-4 gap-2" id="depths">
+            <button type="button" class="btn min-h-12 text-[15px]" data-depth="light">Light</button>
+            <button type="button" class="btn min-h-12 text-[15px]" data-depth="real">Real</button>
+            <button type="button" class="btn min-h-12 text-[15px]" data-depth="deep">Deep</button>
+            <button type="button" class="btn min-h-12 text-[15px] btn-primary" data-depth="any">Mix</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="eyebrow mb-2">How many mats</legend>
+          <div class="grid grid-cols-4 gap-2" id="counts">
+            <button type="button" class="btn min-h-12" data-n="2">2</button>
+            <button type="button" class="btn min-h-12 btn-primary" data-n="4">4</button>
+            <button type="button" class="btn min-h-12" data-n="6">6</button>
+            <button type="button" class="btn min-h-12" data-n="8">8</button>
+          </div>
+        </fieldset>
+        <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+        <button type="button" class="btn" data-action="shuffle">Shuffle questions</button>
+        <button type="button" class="btn btn-primary text-lg py-4" data-action="pdf">Download placemats (PDF)</button>
+      </form>
+    </div>
+  </div>
+  <script src="./placemats.js"></script>
+</Layout>
