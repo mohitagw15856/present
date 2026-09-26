@@ -1,0 +1,11 @@
+{
+  "name": "@present/one-question",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One conversation prompt per day, the same one for everyone. Read it aloud.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "text": "What did you eat today that you would happily eat again tomorrow?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the best thing you can see from where you are sitting?",
+    "depth": "light"
+  },
+  {
+    "text": "Which small chore do you secretly enjoy?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a smell that takes you straight back to childhood?",
+    "depth": "light"
+  },
+  {
+    "text": "If you could keep only one app on your phone, which one stays?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the last thing that made you laugh out loud?",
+    "depth": "light"
+  },
+  {
+    "text": "What do you order at a café you have never been to before?",
+    "depth": "light"
+  },
+  {
+    "text": "Which song would you play to wake everyone at this table up?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a word you love the sound of?",
+    "depth": "light"
+  },
+  {
+    "text": "What is something you are strangely good at?",
+    "depth": "light"
+  },
+  {
+    "text": "What was your favourite toy, and what happened to it?",
+    "depth": "light"
+  },
+  {
+    "text": "Which season suits you best, and why?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a food you refused as a child and love now?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the most useful thing you own that cost less than a coffee?",
+    "depth": "light"
+  },
+  {
+    "text": "Where in this town would you take a visitor first?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a habit you picked up from a friend?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the first thing you do when you get home?",
+    "depth": "light"
+  },
+  {
+    "text": "Tea, coffee, or neither, and how do you take it?",
+    "depth": "light"
+  },
+  {
+    "text": "Which animal do people say you look like?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a film you can quote far too much of?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the best gift you have ever given?",
+    "depth": "light"
+  },
+  {
+    "text": "What did you want to be when you were seven?",
+    "depth": "light"
+  },
+  {
+    "text": "What would your walk-on song be?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a place you have been that sounds boring but was wonderful?",
+    "depth": "light"
+  },
+  {
+    "text": "Which meal would you cook for everyone at this table?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a rule in your home that visitors find strange?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the longest you have gone without your phone on purpose?",
+    "depth": "light"
+  },
+  {
+    "text": "What is something you always pack and never use?",
+    "depth": "light"
+  },
+  {
+    "text": "What is your favourite way to waste an afternoon without a screen?",
+    "depth": "light"
+  },
+  {
+    "text": "Who is the funniest person you know, and what do they do?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a small thing that instantly improves your mood?",
+    "depth": "light"
+  },
+  {
+    "text": "Which board game do you always win?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the strangest thing in your fridge right now?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a piece of clothing you have owned for more than ten years?",
+    "depth": "light"
+  },
+  {
+    "text": "Which language would you learn tomorrow if it took no effort?",
+    "depth": "light"
+  },
+  {
+    "text": "What is your earliest memory of a birthday?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a job you would try for exactly one day?",
+    "depth": "light"
+  },
+  {
+    "text": "Which room in your home do you like best, and at what time of day?",
+    "depth": "light"
+  },
+  {
+    "text": "What is one thing you know how to fix?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a snack that reminds you of one particular person?",
+    "depth": "light"
+  },
+  {
+    "text": "What was the last thing you made with your hands?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a sound you find deeply satisfying?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the first thing you notice about a new place?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a family tradition you did not realise was unusual?",
+    "depth": "light"
+  },
+  {
+    "text": "Which year of school do you remember best, and why?",
+    "depth": "light"
+  },
+  {
+    "text": "What do you do on a long train journey?",
+    "depth": "light"
+  },
+  {
+    "text": "If this table had a team name, what would it be?",
+    "depth": "light"
+  },
+  {
+    "text": "What is the best advice you ever ignored?",
+    "depth": "light"
+  },
+  {
+    "text": "Who taught you to ride a bike, and how did it go?",
+    "depth": "light"
+  },
+  {
+    "text": "What is a nickname you have had, and where did it come from?",
+    "depth": "light"
+  },
+  {
+    "text": "What is something you have changed your mind about this year?",
+    "depth": "real"
+  },
+  {
+    "text": "When did you last feel properly rested?",
+    "depth": "real"
+  },
+  {
+    "text": "What do you do when you cannot sleep?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a compliment you still remember years later?",
+    "depth": "real"
+  },
+  {
+    "text": "What are you avoiding at the moment, and what would it take to face it?",
+    "depth": "real"
+  },
+  {
+    "text": "Who do you wish you spoke to more often?",
+    "depth": "real"
+  },
+  {
+    "text": "What is something you are proud of that nobody congratulated you for?",
+    "depth": "real"
+  },
+  {
+    "text": "What did you learn from your worst job?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a friendship that faded, and what did it teach you?",
+    "depth": "real"
+  },
+  {
+    "text": "What do you spend money on that other people think is silly?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a habit you would like to lose by this time next year?",
+    "depth": "real"
+  },
+  {
+    "text": "What would surprise your younger self most about your life now?",
+    "depth": "real"
+  },
+  {
+    "text": "When did you last do something for the first time?",
+    "depth": "real"
+  },
+  {
+    "text": "What is the kindest thing a stranger has done for you?",
+    "depth": "real"
+  },
+  {
+    "text": "What are you better at than you were five years ago?",
+    "depth": "real"
+  },
+  {
+    "text": "What are you still learning to say no to?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a decision you are glad you did not rush?",
+    "depth": "real"
+  },
+  {
+    "text": "Where do you go when you need to think?",
+    "depth": "real"
+  },
+  {
+    "text": "What was the last thing that made you cry?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a fear you have mostly grown out of?",
+    "depth": "real"
+  },
+  {
+    "text": "Who in your life do you think is underrated?",
+    "depth": "real"
+  },
+  {
+    "text": "What helps you feel like yourself again after a hard week?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a story your family tells about you that you do not remember?",
+    "depth": "real"
+  },
+  {
+    "text": "What have you kept that you should probably let go of?",
+    "depth": "real"
+  },
+  {
+    "text": "When did you last change a plan because someone needed you?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a skill you admire in someone at this table?",
+    "depth": "real"
+  },
+  {
+    "text": "How do you know when you are tired rather than just busy?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a promise you made to yourself and kept?",
+    "depth": "real"
+  },
+  {
+    "text": "Which teacher shaped you, and do they know it?",
+    "depth": "real"
+  },
+  {
+    "text": "What would you do with one completely free day this week?",
+    "depth": "real"
+  },
+  {
+    "text": "What is something you used to be certain about?",
+    "depth": "real"
+  },
+  {
+    "text": "Which part of your day do you rush through most often?",
+    "depth": "real"
+  },
+  {
+    "text": "When did you last say sorry and mean it?",
+    "depth": "real"
+  },
+  {
+    "text": "What advice do you give often but find hard to follow?",
+    "depth": "real"
+  },
+  {
+    "text": "What small ritual holds your week together?",
+    "depth": "real"
+  },
+  {
+    "text": "What do you wish people asked you about more?",
+    "depth": "real"
+  },
+  {
+    "text": "What song has changed meaning for you over time?",
+    "depth": "real"
+  },
+  {
+    "text": "What place do you keep meaning to go back to?",
+    "depth": "real"
+  },
+  {
+    "text": "What are you looking forward to in the next month?",
+    "depth": "real"
+  },
+  {
+    "text": "What do you find easy that other people seem to find hard?",
+    "depth": "real"
+  },
+  {
+    "text": "What moment from this week would you like to keep?",
+    "depth": "real"
+  },
+  {
+    "text": "What did you want to do with your life at eighteen, and how close are you?",
+    "depth": "real"
+  },
+  {
+    "text": "How have you surprised yourself recently?",
+    "depth": "real"
+  },
+  {
+    "text": "Who was the last person you wrote a real letter to?",
+    "depth": "real"
+  },
+  {
+    "text": "What is something you have forgiven someone for?",
+    "depth": "real"
+  },
+  {
+    "text": "What is a boundary you are glad you set?",
+    "depth": "real"
+  },
+  {
+    "text": "What kind of old person do you hope to be?",
+    "depth": "real"
+  },
+  {
+    "text": "What is the best conversation you have had this year, and who was it with?",
+    "depth": "real"
+  },
+  {
+    "text": "What is something you do only because your parents did it?",
+    "depth": "real"
+  },
+  {
+    "text": "What would you tell yourself one year ago today?",
+    "depth": "real"
+  },
+  {
+    "text": "What do you hope people say about you when you are not in the room?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is a grief you carry that you rarely mention?",
+    "depth": "deep"
+  },
+  {
+    "text": "When have you felt most fully yourself?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you believe now that you could not have believed ten years ago?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is a question you are afraid to know the answer to?",
+    "depth": "deep"
+  },
+  {
+    "text": "Who would you call first with terrible news, and why them?",
+    "depth": "deep"
+  },
+  {
+    "text": "What has loving someone taught you about yourself?",
+    "depth": "deep"
+  },
+  {
+    "text": "Which part of your life have you not yet made peace with?",
+    "depth": "deep"
+  },
+  {
+    "text": "What would you do differently if nobody would ever know?",
+    "depth": "deep"
+  },
+  {
+    "text": "When did you last feel truly seen by someone?",
+    "depth": "deep"
+  },
+  {
+    "text": "What are you trying to prove, and to whom?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is something you have never said out loud?",
+    "depth": "deep"
+  },
+  {
+    "text": "What does a good life look like to you, in plain terms?",
+    "depth": "deep"
+  },
+  {
+    "text": "Which of your parents' qualities do you hope to carry, and which do you hope to leave behind?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is the hardest thing you have ever had to accept?",
+    "depth": "deep"
+  },
+  {
+    "text": "What are you most afraid of becoming?",
+    "depth": "deep"
+  },
+  {
+    "text": "Where do you feel you truly belong?",
+    "depth": "deep"
+  },
+  {
+    "text": "What would you want one particular person to remember you for?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is a version of your life you sometimes imagine?",
+    "depth": "deep"
+  },
+  {
+    "text": "When have you been brave in a way nobody noticed?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you owe the people who raised you?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is something you were ashamed of and have since forgiven yourself for?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you think happens after we die, and how does that change how you live?",
+    "depth": "deep"
+  },
+  {
+    "text": "Who hurt you in a way that ended up shaping you for the better?",
+    "depth": "deep"
+  },
+  {
+    "text": "What would you fight for, if it came to that?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is love, in your own words, and how has your answer changed?",
+    "depth": "deep"
+  },
+  {
+    "text": "What are you holding onto that is holding you back?",
+    "depth": "deep"
+  },
+  {
+    "text": "When did you last feel wonder?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is the most honest thing you can say about where you are right now?",
+    "depth": "deep"
+  },
+  {
+    "text": "If you knew you had one year left, what would you stop doing tomorrow?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you need more of, and what stops you asking for it?",
+    "depth": "deep"
+  },
+  {
+    "text": "Whose approval do you still seek, even now?",
+    "depth": "deep"
+  },
+  {
+    "text": "What would your life look like if you trusted yourself completely?",
+    "depth": "deep"
+  },
+  {
+    "text": "What truth about your family took you years to see?",
+    "depth": "deep"
+  },
+  {
+    "text": "How are you and your body getting along at the moment?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you want that you feel you are not allowed to want?",
+    "depth": "deep"
+  },
+  {
+    "text": "When did you first understand that your parents were ordinary people?",
+    "depth": "deep"
+  },
+  {
+    "text": "What have you lost that you still look for?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you think you are here to do?",
+    "depth": "deep"
+  },
+  {
+    "text": "What kindness did you receive that you have never repaid?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you find hardest to forgive in yourself?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you know about yourself that you wish were not true?",
+    "depth": "deep"
+  },
+  {
+    "text": "Who do you miss, and what would you say to them right now?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you want from the people at this table?",
+    "depth": "deep"
+  },
+  {
+    "text": "What are you afraid to admit you have given up on?",
+    "depth": "deep"
+  },
+  {
+    "text": "What is the difference between who you are and who you present?",
+    "depth": "deep"
+  },
+  {
+    "text": "What has this year asked of you?",
+    "depth": "deep"
+  },
+  {
+    "text": "What does home mean to you now, compared with when you were a child?",
+    "depth": "deep"
+  },
+  {
+    "text": "What would you like to be forgiven for?",
+    "depth": "deep"
+  },
+  {
+    "text": "What do you hope is true?",
+    "depth": "deep"
+  }
+]

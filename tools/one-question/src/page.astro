@@ -1,0 +1,22 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="One Question" description="One conversation prompt per day, the same one for everyone. Read it aloud." tool>
+  <div class="min-h-[70dvh] flex flex-col">
+    <p class="eyebrow">One Question · <time data-bind="date"></time></p>
+
+    <div class="flex-1 flex flex-col justify-center py-10 sm:py-16">
+      <p class="display text-4xl sm:text-6xl leading-[1.15]" data-bind="question" aria-live="polite">&nbsp;</p>
+      <p class="mt-8 flex items-center gap-3 text-muted">
+        <span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium" data-bind="depth"></span>
+        <span class="text-[15px]">Read it aloud. Everyone answers.</span>
+      </p>
+    </div>
+
+    <div class="flex flex-col items-start gap-3">
+      <button type="button" class="btn" data-action="another">Another</button>
+      <p class="text-muted text-[15px]" data-bind="remaining"></p>
+    </div>
+  </div>
+  <script src="./one-question.js"></script>
+</Layout>
