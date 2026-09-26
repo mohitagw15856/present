@@ -12,3 +12,4 @@ All notable changes to this project are documented here. The format follows [Kee
 - One Question: deterministic daily prompt with three “another”s; 150-prompt bank in data/questions.json.
 - Conversation Roulette: depth picker, shuffled no-repeat deck, nothing stored.
 - Phone Parking Signs: six templates, editable wording, palette colours, A4 sign or folded table card PDF.
+- Noticing Cards: 60-card deck in data/noticing-cards.json, shuffle preview, own cards, A4/Letter PDF with cut lines.

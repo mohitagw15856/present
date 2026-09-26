@@ -17,6 +17,7 @@
     "@present/table-pact": "workspace:*",
     "@present/one-question": "workspace:*",
     "@present/conversation-roulette": "workspace:*",
-    "@present/phone-parking": "workspace:*"
+    "@present/phone-parking": "workspace:*",
+    "@present/noticing-cards": "workspace:*"
   }
 }

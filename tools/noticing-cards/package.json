@@ -1,0 +1,12 @@
+{
+  "name": "@present/noticing-cards",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A printable deck of attention prompts. Add your own, print with cut lines.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

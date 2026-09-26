@@ -1,0 +1,56 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Noticing Cards" description="A printable deck of attention prompts. Add your own, print with cut lines." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Noticing Cards</p>
+      <h1 class="display text-4xl sm:text-5xl">Sixty small ways to look up.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Print the deck, cut along the lines, and leave it where people sit. Draw one, do it, pass it on.</p>
+    </div>
+
+    <section aria-labelledby="preview-h">
+      <div class="flex items-center justify-between mb-3">
+        <h2 id="preview-h" class="eyebrow">Preview · <span data-bind="count"></span> cards</h2>
+        <button type="button" class="btn btn-quiet min-h-11 px-3" data-action="shuffle">Shuffle</button>
+      </div>
+      <ul id="preview" class="grid grid-cols-2 sm:grid-cols-3 gap-3"></ul>
+    </section>
+
+    <section aria-labelledby="own-h" class="card p-5 sm:p-6">
+      <h2 id="own-h" class="eyebrow mb-3">Your own cards</h2>
+      <ul id="own" class="flex flex-col gap-2 mb-4 empty:mb-0"></ul>
+      <form id="add" class="flex flex-col gap-3" autocomplete="off">
+        <input class="field" type="text" name="text" maxlength="110" placeholder="Find, notice, listen for…" required />
+        <input class="field" type="text" name="hint" maxlength="60" placeholder="Optional hint" />
+        <button type="submit" class="btn self-start">Add card</button>
+      </form>
+      <p class="text-muted text-sm mt-3">Kept in this browser only. Clear them by removing each one.</p>
+    </section>
+
+    <section aria-labelledby="print-h" class="flex flex-col gap-4">
+      <h2 id="print-h" class="eyebrow">Print</h2>
+      <div class="grid grid-cols-2 gap-2 max-w-xs" id="paper">
+        <button type="button" class="btn min-h-12 text-[15px] btn-primary" data-paper="a4">A4</button>
+        <button type="button" class="btn min-h-12 text-[15px]" data-paper="letter">US Letter</button>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-4 self-start" data-action="download">Download the deck (PDF)</button>
+      <p class="text-muted text-sm">Nine cards a page, 63 × 88 mm, dashed cut lines. Drawn on your device; nothing is uploaded.</p>
+    </section>
+  </div>
+
+  <template id="card-tpl">
+    <li class="card p-4 aspect-[63/88] flex flex-col text-[15px] leading-snug">
+      <span class="flex items-center gap-1.5 text-muted text-[11px] tracking-[0.1em]"><span class="h-2 w-2 rounded-full bg-accent"></span>NOTICE</span>
+      <span class="my-auto" data-slot="text"></span>
+      <span class="text-muted text-xs" data-slot="hint"></span>
+    </li>
+  </template>
+  <template id="own-tpl">
+    <li class="flex items-start justify-between gap-3 rounded-lg bg-surface-2 px-4 py-3">
+      <span><span data-slot="text"></span> <span class="text-muted" data-slot="hint"></span></span>
+      <button type="button" class="btn btn-quiet min-h-11 px-2 -my-2" data-remove aria-label="Remove card">Remove</button>
+    </li>
+  </template>
+  <script src="./cards.js"></script>
+</Layout>

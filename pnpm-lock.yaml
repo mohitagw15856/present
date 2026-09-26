@@ -177,6 +177,9 @@ importers:
       '@present/conversation-roulette':
         specifier: workspace:*
         version: link:../tools/conversation-roulette
+      '@present/noticing-cards':
+        specifier: workspace:*
+        version: link:../tools/noticing-cards
       '@present/one-question':
         specifier: workspace:*
         version: link:../tools/one-question
@@ -204,6 +207,15 @@ importers:
       '@present/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+
+  tools/noticing-cards:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
 
   tools/one-question:
     dependencies:
