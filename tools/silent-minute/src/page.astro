@@ -1,0 +1,20 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Silent Minute" description="Tap once. Sixty blank seconds together. Then one word." tool>
+  <div id="app" class="min-h-[70dvh] flex flex-col">
+    <section data-view="start" class="flex-1 flex flex-col gap-8 justify-center">
+      <div>
+        <p class="eyebrow mb-3">Silent Minute</p>
+        <h1 class="display text-4xl sm:text-5xl">Sixty seconds. Nobody says anything.</h1>
+        <p class="mt-4 text-muted text-lg max-w-md">Put the phone in the middle, screen up. Tap once. When the word appears, the minute is over.</p>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-5" data-action="begin">Begin</button>
+    </section>
+    <section data-view="silent" class="fixed inset-0 bg-bg" hidden aria-live="off"></section>
+    <section data-view="now" class="fixed inset-0 bg-bg flex items-center justify-center" hidden>
+      <button type="button" class="display text-7xl sm:text-9xl" data-action="done" aria-label="Now. Tap to finish.">Now.</button>
+    </section>
+  </div>
+  <script src="./silent-minute.js"></script>
+</Layout>

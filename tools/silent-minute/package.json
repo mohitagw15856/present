@@ -1,0 +1,13 @@
+{
+  "name": "@present/silent-minute",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tap once. Sixty blank seconds together. Then one word.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}
