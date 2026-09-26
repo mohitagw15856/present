@@ -1,0 +1,20 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Two Truths" description="A topic and the rule. Two truths and a lie each, out loud. Phone stays down." tool>
+  <div class="min-h-[70dvh] flex flex-col">
+    <p class="eyebrow">Two Truths</p>
+    <div class="flex-1 flex flex-col justify-center py-10 gap-8">
+      <div>
+        <p class="text-muted text-lg">Tonight’s topic</p>
+        <p class="display text-4xl sm:text-6xl leading-[1.15]" data-bind="topic" aria-live="polite"></p>
+      </div>
+      <div class="card p-5 sm:p-6 text-lg leading-relaxed">
+        <p class="eyebrow mb-2">The rule</p>
+        <p>Each person says three things about themselves on this topic. Two are true. One is not. The table guesses the lie. Then the next person. The phone stays face down until everyone has gone.</p>
+      </div>
+    </div>
+    <button type="button" class="btn self-start" data-action="another">Different topic</button>
+  </div>
+  <script src="./two-truths.js"></script>
+</Layout>

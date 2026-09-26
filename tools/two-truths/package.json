@@ -1,0 +1,13 @@
+{
+  "name": "@present/two-truths",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A topic and the rule. Two truths and a lie each, out loud. Phone stays down.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}
