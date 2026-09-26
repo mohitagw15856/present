@@ -1,0 +1,14 @@
+{
+  "name": "@present/coupons",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Printable tokens for one uninterrupted hour. Cut out, hand over, redeem in person.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

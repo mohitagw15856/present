@@ -1,0 +1,31 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Screen-Free Coupons" description="Printable tokens for one uninterrupted hour. Cut out, hand over, redeem in person." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Screen-Free Coupons</p>
+      <h1 class="display text-4xl sm:text-5xl">Eight promises, on paper.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Cut them out, hand them over, redeem in person. For partners, kids, housemates, parents.</p>
+    </div>
+    <ul id="list" class="grid sm:grid-cols-2 gap-2 text-[15px]"></ul>
+    <form id="f" class="flex flex-col gap-6" autocomplete="off">
+      <div class="grid grid-cols-2 gap-3 max-w-sm">
+        <label class="block"><span class="eyebrow block mb-2">From</span><input class="field" name="from" maxlength="24" placeholder="Optional" /></label>
+        <label class="block"><span class="eyebrow block mb-2">To</span><input class="field" name="to" maxlength="24" placeholder="Optional" /></label>
+      </div>
+      <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+      <button type="button" class="btn btn-primary text-lg py-4 self-start" data-action="pdf">Download the sheet (PDF)</button>
+    </form>
+  </div>
+  <script src="./coupons.js"></script>
+</Layout>
