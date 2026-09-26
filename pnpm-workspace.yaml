@@ -2,10 +2,9 @@ packages:
   - site
   - packages/*
   - tools/*
+
+# Build scripts must be approved explicitly (pnpm 10+). core-js's postinstall only prints an ad.
 allowBuilds:
-  core-js: set this to true or false
-  esbuild: set this to true or false
-  sharp: set this to true or false
-onlyBuiltDependencies:
-  - esbuild
-  - sharp
+  esbuild: true
+  sharp: true
+  core-js: false
