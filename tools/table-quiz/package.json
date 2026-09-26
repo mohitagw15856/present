@@ -4,8 +4,11 @@
   "private": true,
   "type": "module",
   "description": "A pub-quiz round about the people at the table. One phone reads, everyone writes.",
-  "exports": { ".": "./index.mjs" },
+  "exports": {
+    ".": "./index.mjs"
+  },
   "dependencies": {
-    "@present/shared": "workspace:*"
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
   }
 }

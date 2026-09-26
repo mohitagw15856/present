@@ -1,5 +1,6 @@
 import { quizQuestions } from '@present/shared/quiz';
 import { shuffled } from '@present/shared/questions';
+import { pdfButton } from '@present/shared/download';
 
 const $ = (s) => document.querySelector(s);
 const $$ = (s) => [...document.querySelectorAll(s)];
@@ -64,4 +65,5 @@ $('[data-action="print"]').addEventListener('click', () => {
   window.print();
 });
 
+pdfButton($('[data-action="pdf"]'), async (jsPDF) => (await import('./pdf.js')).drawAnswerSheets(jsPDF, {}), 'table-quiz-answer-sheets.pdf');
 show('setup');
