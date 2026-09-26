@@ -12,9 +12,13 @@
     "./tools": "./src/tools.js",
     "./questions": "./src/questions.js",
     "./cards": "./src/cards.js",
-    "./quiz": "./src/quiz.js"
+    "./quiz": "./src/quiz.js",
+    "./pdf": "./src/pdf.js",
+    "./languages": "./src/languages.js",
+    "./download": "./src/download.js"
   },
   "dependencies": {
-    "@fontsource-variable/inter": "^5.3.0"
+    "@fontsource-variable/inter": "^5.3.0",
+    "jspdf": "^4.2.1"
   }
 }

@@ -49,12 +49,4 @@ export const templates = [
   },
 ];
 
-/* Light-mode palette values from packages/shared/src/tokens.css, fixed for print. */
-export const colours = {
-  sage: { name: 'Sage', fill: '#c9d8c8', deep: '#5b7460' },
-  blush: { name: 'Dusty pink', fill: '#ebcaca', deep: '#8f5c5f' },
-  mist: { name: 'Pale blue', fill: '#c9d8e4', deep: '#557084' },
-  sand: { name: 'Sand', fill: '#efe0c8', deep: '#8a6f45' },
-};
-
-export const paper = { cream: '#fbf8f2', ink: '#2b2823', muted: '#7a736a' };
+export { colours, paper } from '@present/shared/pdf';

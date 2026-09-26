@@ -3,8 +3,8 @@ import questions from '../../../data/questions.json';
 export const DEPTHS = ['light', 'real', 'deep'];
 export { questions };
 
-export function byDepth(depth) {
-  return depth && depth !== 'any' ? questions.filter((q) => q.depth === depth) : questions;
+export function byDepth(depth, bank = questions) {
+  return depth && depth !== 'any' ? bank.filter((q) => q.depth === depth) : bank;
 }
 
 /** FNV-1a; small, fast, deterministic across devices. */
@@ -30,14 +30,14 @@ export function localDateKey(d = new Date()) {
  * Deterministic: everyone who opens the page on the same day sees the same sequence.
  * Steps never repeat a question within the same day.
  */
-export function questionFor(dateKey, step = 0) {
+export function questionFor(dateKey, step = 0, bank = questions) {
   const seen = new Set();
   let pick = null;
   for (let s = 0; s <= step; s++) {
-    let i = hashString(`${dateKey}:${s}`) % questions.length;
-    while (seen.has(i)) i = (i + 1) % questions.length;
+    let i = hashString(`${dateKey}:${s}`) % bank.length;
+    while (seen.has(i)) i = (i + 1) % bank.length;
     seen.add(i);
-    pick = questions[i];
+    pick = bank[i];
   }
   return pick;
 }

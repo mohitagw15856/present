@@ -1,3 +1,5 @@
+import { ensureDoc } from '@present/shared/pdf';
+
 /* Card geometry, in millimetres. Poker size, 3 × 3 per page. */
 export const CARD_W = 63;
 export const CARD_H = 88;
@@ -18,9 +20,9 @@ const sage = [134, 160, 135];
  * Draw every card onto pages of nine with cut lines. Pure: takes the jsPDF
  * constructor, the card list and 'a4' | 'letter'; returns the document.
  */
-export function drawDeck(jsPDF, cards, paperId = 'a4') {
+export function drawDeck(jsPDF, cards, paperId = 'a4', doc) {
   const paper = PAPER[paperId] || PAPER.a4;
-  const doc = new jsPDF({ unit: 'mm', format: paper.format, orientation: 'portrait' });
+  doc = ensureDoc(jsPDF, doc, { format: paper.format, orientation: 'portrait' });
   const gridW = CARD_W * COLS;
   const gridH = CARD_H * ROWS;
   const x0 = (paper.w - gridW) / 2;
@@ -28,7 +30,7 @@ export function drawDeck(jsPDF, cards, paperId = 'a4') {
   const perPage = COLS * ROWS;
 
   for (let p = 0; p < Math.ceil(cards.length / perPage); p++) {
-    if (p > 0) doc.addPage();
+    if (p > 0) doc.addPage(paper.format, 'portrait');
     cutLines(doc, paper, x0, y0, gridW, gridH);
     const slice = cards.slice(p * perPage, (p + 1) * perPage);
     slice.forEach((card, i) => {
