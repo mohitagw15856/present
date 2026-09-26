@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slow Browser settings</title>
+  <link rel="stylesheet" href="pause.css" />
+  <style>
+    main { text-align: left; align-items: stretch; max-width: 36rem; }
+    h1 { font-weight: 500; letter-spacing: -0.02em; font-size: 1.75rem; margin: 0; }
+    label { display: block; }
+    .eyebrow { font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 0.5rem; }
+    textarea, input { font: inherit; width: 100%; padding: 0.85rem 1rem; border-radius: 0.875rem; border: 1px solid var(--line); background: transparent; color: var(--text); }
+    textarea { min-height: 14rem; resize: vertical; }
+    .row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+    .row input { width: 6rem; }
+    .saved { color: var(--muted); min-height: 1.5rem; }
+    p { margin: 0; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Slow Browser</h1>
+    <p>Before any of these sites opens, you get a ten-second breath. Nothing is recorded, nothing leaves this device.</p>
+    <label>
+      <span class="eyebrow">Sites, one per line</span>
+      <textarea id="sites" spellcheck="false"></textarea>
+    </label>
+    <label>
+      <span class="eyebrow">After continuing, do not ask again for</span>
+      <span class="row"><input id="minutes" type="number" min="1" max="240" step="1" /> minutes, per tab</span>
+    </label>
+    <div class="row">
+      <button id="save" class="btn">Save</button>
+      <button id="reset" class="btn quiet">Restore defaults</button>
+      <span class="saved" id="saved"></span>
+    </div>
+  </main>
+  <script src="shared.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "@present/slow-browser",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A browser extension that puts a ten-second breath in front of infinite scroll.",
+  "scripts": {
+    "build": "node build.mjs"
+  }
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A moment</title>
+  <link rel="stylesheet" href="pause.css" />
+</head>
+<body>
+  <main>
+    <div class="breath" aria-hidden="true"><div class="ring"></div></div>
+    <p class="prompt" id="prompt">Is there someone you could talk to instead?</p>
+    <p class="hint" id="hint">Breathe in as the circle grows. Out as it settles.</p>
+    <div class="actions">
+      <button id="continue" class="btn" disabled>Continue in <span id="count">10</span></button>
+      <button id="close" class="btn quiet">Close this tab</button>
+    </div>
+    <p class="site" id="site"></p>
+  </main>
+  <script src="shared.js"></script>
+  <script src="pause.js"></script>
+</body>
+</html>
