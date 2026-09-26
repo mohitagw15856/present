@@ -22,6 +22,24 @@
     "@present/walk-and-talk": "workspace:*",
     "@present/presence-ledger": "workspace:*",
     "@present/analog-hour": "workspace:*",
-    "@present/table-quiz": "workspace:*"
+    "@present/table-quiz": "workspace:*",
+    "@present/story-stack": "workspace:*",
+    "@present/two-truths": "workspace:*",
+    "@present/toast": "workspace:*",
+    "@present/silent-minute": "workspace:*",
+    "@present/pass-the-parcel": "workspace:*",
+    "@present/bench": "workspace:*",
+    "@present/direction-dice": "workspace:*",
+    "@present/sky-check": "workspace:*",
+    "@present/post-it": "workspace:*",
+    "@present/placemats": "workspace:*",
+    "@present/guest-book": "workspace:*",
+    "@present/coupons": "workspace:*",
+    "@present/fridge-question": "workspace:*",
+    "@present/charger-station": "workspace:*",
+    "@present/bedtime-handover": "workspace:*",
+    "@present/house-rules": "workspace:*",
+    "jspdf": "^4.2.1",
+    "@present/venue-kit": "workspace:*"
   }
 }

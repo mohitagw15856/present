@@ -1,0 +1,13 @@
+{
+  "name": "@present/story-stack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One first line. Each person tells the next part, then passes the phone on.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

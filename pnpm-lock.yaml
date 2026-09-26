@@ -171,36 +171,90 @@ importers:
       '@fontsource-variable/inter':
         specifier: ^5.3.0
         version: 5.3.0
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
 
   site:
     dependencies:
       '@present/analog-hour':
         specifier: workspace:*
         version: link:../tools/analog-hour
+      '@present/bedtime-handover':
+        specifier: workspace:*
+        version: link:../tools/bedtime-handover
+      '@present/bench':
+        specifier: workspace:*
+        version: link:../tools/bench
+      '@present/charger-station':
+        specifier: workspace:*
+        version: link:../tools/charger-station
       '@present/conversation-roulette':
         specifier: workspace:*
         version: link:../tools/conversation-roulette
+      '@present/coupons':
+        specifier: workspace:*
+        version: link:../tools/coupons
+      '@present/direction-dice':
+        specifier: workspace:*
+        version: link:../tools/direction-dice
+      '@present/fridge-question':
+        specifier: workspace:*
+        version: link:../tools/fridge-question
+      '@present/guest-book':
+        specifier: workspace:*
+        version: link:../tools/guest-book
+      '@present/house-rules':
+        specifier: workspace:*
+        version: link:../tools/house-rules
       '@present/noticing-cards':
         specifier: workspace:*
         version: link:../tools/noticing-cards
       '@present/one-question':
         specifier: workspace:*
         version: link:../tools/one-question
+      '@present/pass-the-parcel':
+        specifier: workspace:*
+        version: link:../tools/pass-the-parcel
       '@present/phone-parking':
         specifier: workspace:*
         version: link:../tools/phone-parking
+      '@present/placemats':
+        specifier: workspace:*
+        version: link:../tools/placemats
+      '@present/post-it':
+        specifier: workspace:*
+        version: link:../tools/post-it
       '@present/presence-ledger':
         specifier: workspace:*
         version: link:../tools/presence-ledger
       '@present/shared':
         specifier: workspace:*
         version: link:../packages/shared
+      '@present/silent-minute':
+        specifier: workspace:*
+        version: link:../tools/silent-minute
+      '@present/sky-check':
+        specifier: workspace:*
+        version: link:../tools/sky-check
+      '@present/story-stack':
+        specifier: workspace:*
+        version: link:../tools/story-stack
       '@present/table-pact':
         specifier: workspace:*
         version: link:../tools/table-pact
       '@present/table-quiz':
         specifier: workspace:*
         version: link:../tools/table-quiz
+      '@present/toast':
+        specifier: workspace:*
+        version: link:../tools/toast
+      '@present/two-truths':
+        specifier: workspace:*
+        version: link:../tools/two-truths
+      '@present/venue-kit':
+        specifier: workspace:*
+        version: link:../tools/venue-kit
       '@present/walk-and-talk':
         specifier: workspace:*
         version: link:../tools/walk-and-talk
@@ -210,6 +264,9 @@ importers:
       astro:
         specifier: ^5.0.0
         version: 5.18.2(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.63.5)(typescript@5.9.3)
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
       tailwindcss:
         specifier: ^4.0.0
         version: 4.3.3
@@ -220,11 +277,74 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
 
+  tools/bedtime-handover:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/bench:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/charger-station:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
   tools/conversation-roulette:
     dependencies:
       '@present/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+
+  tools/coupons:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/direction-dice:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/fridge-question:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/guest-book:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/house-rules:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
 
   tools/noticing-cards:
     dependencies:
@@ -241,7 +361,31 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
 
+  tools/pass-the-parcel:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
   tools/phone-parking:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/placemats:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/post-it:
     dependencies:
       '@present/shared':
         specifier: workspace:*
@@ -256,7 +400,25 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
 
+  tools/silent-minute:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/sky-check:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
   tools/slow-browser: {}
+
+  tools/story-stack:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
 
   tools/table-pact:
     dependencies:
@@ -272,6 +434,30 @@ importers:
       '@present/shared':
         specifier: workspace:*
         version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
+
+  tools/toast:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/two-truths:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+
+  tools/venue-kit:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      jspdf:
+        specifier: ^4.2.1
+        version: 4.2.1
 
   tools/walk-and-talk:
     dependencies:

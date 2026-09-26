@@ -1,0 +1,49 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Story Stack" description="One first line. Each person tells the next part, then passes the phone on." tool>
+  <div id="app" class="min-h-[70dvh] flex flex-col">
+    <section data-view="setup" class="flex-1 flex flex-col gap-8">
+      <div>
+        <p class="eyebrow mb-3">Story Stack</p>
+        <h1 class="display text-4xl sm:text-5xl">One first line. The table finishes it.</h1>
+        <p class="mt-4 text-muted text-lg max-w-md">The phone shows a first line. Whoever holds it tells the next part, then passes it left. A round ends when it gets back to the start.</p>
+      </div>
+      <fieldset>
+        <legend class="eyebrow mb-2">People at the table</legend>
+        <div class="grid grid-cols-4 gap-2" id="people">
+          <button type="button" class="btn" data-n="2">2</button>
+          <button type="button" class="btn" data-n="3">3</button>
+          <button type="button" class="btn btn-primary" data-n="4">4</button>
+          <button type="button" class="btn" data-n="5">5</button>
+          <button type="button" class="btn" data-n="6">6</button>
+          <button type="button" class="btn" data-n="7">7</button>
+          <button type="button" class="btn" data-n="8">8</button>
+          <button type="button" class="btn" data-n="10">10</button>
+        </div>
+      </fieldset>
+      <button type="button" class="btn btn-primary text-lg py-4" data-action="start">Deal a first line</button>
+    </section>
+
+    <section data-view="play" class="flex-1 flex flex-col" hidden>
+      <p class="eyebrow">Teller <span data-bind="n"></span> of <span data-bind="total"></span></p>
+      <div class="flex-1 flex flex-col justify-center py-10">
+        <p class="display text-4xl sm:text-5xl leading-[1.15]" data-bind="line"></p>
+        <p class="mt-6 text-muted text-lg" data-bind="hint">Read it aloud, then keep going for a minute or so.</p>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-4" data-action="pass">Pass it left →</button>
+    </section>
+
+    <section data-view="done" class="flex-1 flex flex-col gap-8 justify-center" hidden>
+      <div>
+        <p class="eyebrow mb-3">Round over</p>
+        <h1 class="display text-4xl">Someone should write that down. Not on a phone.</h1>
+      </div>
+      <div class="flex gap-3 flex-wrap">
+        <button type="button" class="btn btn-primary" data-action="again">Another first line</button>
+        <a href="../" class="btn">Back to present</a>
+      </div>
+    </section>
+  </div>
+  <script src="./story-stack.js"></script>
+</Layout>
