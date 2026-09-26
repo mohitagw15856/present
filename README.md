@@ -6,7 +6,7 @@ Small, no-account, no-tracking web tools that help people put their phones down 
 
 ## What it is
 
-A monorepo of ten tiny tools that share one principle: **every tool must reduce time on screen, not add to it.**
+A monorepo of eleven tiny tools that share one principle: **every tool must reduce time on screen, not add to it.**
 
 - No accounts, no backend, no analytics, no cookies.
 - No feeds, no notifications, no streaks, no dark patterns.
@@ -27,8 +27,9 @@ The full design principles are in [`docs/principles.md`](docs/principles.md). Re
 | 6 | **Walk & Talk** | Set a duration and a partner, receive one prompt, then the screen goes dark. One vibration at halfway. | [`tools/walk-and-talk`](tools/walk-and-talk) |
 | 7 | **Presence Ledger** | A journal with exactly three fields per entry. A monthly count, the people who appeared most, Markdown export. Local only. | [`tools/presence-ledger`](tools/presence-ledger) |
 | 8 | **Analog Hour** | Commit to one recurring offline hour a week. Get an `.ics` file and a shareable image card. | [`tools/analog-hour`](tools/analog-hour) |
-| 9 | **Slow Browser** | A Manifest V3 extension (Chrome and Firefox) that puts a ten-second breathing pause before infinite-scroll sites you choose. | [`tools/slow-browser`](tools/slow-browser) |
-| 10 | **Grey Mode Toolkit** | A documented collection of iOS Shortcuts, Android settings and macOS scripts for greyscale, scheduled focus and a hidden app grid. | [`tools/grey-mode`](tools/grey-mode) |
+| 9 | **Table Quiz** | A pub-quiz round where every answer is a person at the table. One phone reads, everyone writes on paper, then the reveal. 80 questions, printable answer sheets. | [`tools/table-quiz`](tools/table-quiz) |
+| 10 | **Slow Browser** | A Manifest V3 extension (Chrome and Firefox) that puts a ten-second breathing pause before infinite-scroll sites you choose. | [`tools/slow-browser`](tools/slow-browser) |
+| 11 | **Grey Mode Toolkit** | A documented collection of iOS Shortcuts, Android settings and macOS scripts for greyscale, scheduled focus and a hidden app grid. | [`tools/grey-mode`](tools/grey-mode) |
 
 The landing page and the philosophy page live in [`site/`](site). The shared design tokens, layout and tool registry live in [`packages/shared/`](packages/shared).
 
@@ -73,6 +74,7 @@ Both banks are plain JSON at the repository root:
 
 - [`data/questions.json`](data/questions.json): each entry has `text` and `depth` (`light`, `real` or `deep`). Used by One Question, Conversation Roulette and Walk & Talk.
 - [`data/noticing-cards.json`](data/noticing-cards.json): each entry has `text` and an optional `hint`.
+- [`data/table-quiz.json`](data/table-quiz.json): each entry has `text`, always a “who at this table…” question answerable with a name.
 
 Open a pull request that adds entries. Keep them original, short enough to read aloud, and answerable by anyone at a table. Full guidance in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
@@ -83,7 +85,7 @@ present/
 ├── site/               landing page, philosophy page, service-worker integration
 ├── packages/shared/    design tokens (tokens.css), Layout.astro, tool registry
 ├── tools/<name>/       one folder per tool; web tools are Astro integrations that inject a route
-├── data/               question bank and card deck
+├── data/               question bank, card deck and quiz questions
 ├── docs/principles.md  what a tool must pass before it belongs here
 └── .github/workflows/  build and deploy to GitHub Pages
 ```

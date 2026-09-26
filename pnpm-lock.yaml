@@ -198,6 +198,9 @@ importers:
       '@present/table-pact':
         specifier: workspace:*
         version: link:../tools/table-pact
+      '@present/table-quiz':
+        specifier: workspace:*
+        version: link:../tools/table-quiz
       '@present/walk-and-talk':
         specifier: workspace:*
         version: link:../tools/walk-and-talk
@@ -253,6 +256,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
 
+  tools/slow-browser: {}
+
   tools/table-pact:
     dependencies:
       '@present/shared':
@@ -261,6 +266,12 @@ importers:
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4
+
+  tools/table-quiz:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
 
   tools/walk-and-talk:
     dependencies:

@@ -16,5 +16,6 @@ All notable changes to this project are documented here. The format follows [Kee
 - Walk & Talk: one prompt, dark screen, halfway vibration, optional one-line note.
 - Presence Ledger: three-field journal, monthly count and most-seen people, Markdown export, local only.
 - Analog Hour: weekly offline hour as .ics (TZID, weekly RRULE) and a shareable PNG card.
+- Table Quiz: pub-quiz round about the people at the table; 80 questions in data/table-quiz.json; printable answer sheets.
 - Slow Browser: MV3 extension (Chrome + Firefox) with a ten-second breathing pause before listed sites; dependency-free build.
 - Grey Mode Toolkit: iOS, Android and macOS guide for greyscale, scheduled focus and a hidden app grid, with macOS scripts and launchd schedule.

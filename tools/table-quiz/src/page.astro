@@ -1,0 +1,86 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Table Quiz" description="A pub-quiz round about the people at the table. One phone reads, everyone writes." tool>
+  <div id="app" class="min-h-[70dvh] flex flex-col print:hidden">
+
+    <section data-view="setup" class="flex-1 flex flex-col gap-8">
+      <div>
+        <p class="eyebrow mb-3">Table Quiz</p>
+        <h1 class="display text-4xl sm:text-5xl">Every answer is someone at this table.</h1>
+        <p class="mt-4 text-muted text-lg max-w-md">One person reads. Everyone else writes a name on paper. Then the reveal, and the stories.</p>
+      </div>
+      <fieldset>
+        <legend class="eyebrow mb-2">Questions this round</legend>
+        <div class="grid grid-cols-3 gap-3" id="lengths">
+          <button type="button" class="btn" data-n="6">6</button>
+          <button type="button" class="btn btn-primary" data-n="8">8</button>
+          <button type="button" class="btn" data-n="10">10</button>
+        </div>
+      </fieldset>
+      <div class="flex flex-col gap-3">
+        <button type="button" class="btn btn-primary text-lg py-4" data-action="deal">Deal a round</button>
+        <button type="button" class="btn" data-action="print">Print answer sheets</button>
+      </div>
+    </section>
+
+    <section data-view="ask" class="flex-1 flex flex-col" hidden>
+      <div class="flex items-center justify-between">
+        <p class="eyebrow">Question <span data-bind="ask-n"></span> of <span data-bind="ask-total"></span></p>
+        <button type="button" class="btn btn-quiet min-h-11 px-3" data-action="quit">End round</button>
+      </div>
+      <button type="button" data-action="ask-next" class="flex-1 flex flex-col justify-center text-left py-10 sm:py-16 -mx-2 px-2 rounded-xl active:bg-surface-2 transition-colors">
+        <span class="display text-4xl sm:text-6xl leading-[1.15]" data-bind="ask-q"></span>
+      </button>
+      <p class="text-muted text-[15px] text-center pb-2">Read it aloud. Everyone writes a name. Tap for the next.</p>
+    </section>
+
+    <section data-view="between" class="flex-1 flex flex-col gap-8 justify-center" hidden>
+      <div>
+        <p class="eyebrow mb-3">Pens down</p>
+        <h1 class="display text-4xl">Swap sheets with a neighbour, then reveal.</h1>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-4" data-action="reveal">Start the reveal</button>
+    </section>
+
+    <section data-view="reveal" class="flex-1 flex flex-col" hidden>
+      <div class="flex items-center justify-between">
+        <p class="eyebrow">Reveal <span data-bind="rev-n"></span> of <span data-bind="rev-total"></span></p>
+        <button type="button" class="btn btn-quiet min-h-11 px-3" data-action="quit">End round</button>
+      </div>
+      <button type="button" data-action="rev-next" class="flex-1 flex flex-col justify-center text-left py-10 sm:py-16 -mx-2 px-2 rounded-xl active:bg-surface-2 transition-colors">
+        <span class="display text-4xl sm:text-6xl leading-[1.15]" data-bind="rev-q"></span>
+        <span class="mt-8 text-lg text-rose-ink">Own up. Then tell the story.</span>
+      </button>
+      <p class="text-muted text-[15px] text-center pb-2">Tap for the next reveal.</p>
+    </section>
+
+    <section data-view="done" class="flex-1 flex flex-col gap-8 justify-center" hidden>
+      <div>
+        <p class="eyebrow mb-3">Round over</p>
+        <h1 class="display text-4xl">Highest score buys the next round. Lowest picks the next question.</h1>
+      </div>
+      <div class="flex gap-3 flex-wrap">
+        <button type="button" class="btn btn-primary" data-action="again">Another round</button>
+        <a href="../" class="btn">Back to present</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- Print-only answer sheets: four per A4 page -->
+  <div id="sheets" class="hidden print:grid grid-cols-2 gap-8" aria-hidden="true"></div>
+
+  <style>
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      header { display: none !important; }
+      #sheets { display: grid; }
+      .sheet { break-inside: avoid; border: 1px dashed #999; padding: 10mm 8mm; font: 11pt/1.4 Inter, sans-serif; color: #2b2823; }
+      .sheet h2 { font-size: 13pt; font-weight: 500; margin: 0 0 2mm; }
+      .sheet p { margin: 0 0 6mm; color: #666; font-size: 9pt; }
+      .sheet ol { margin: 0; padding-left: 6mm; }
+      .sheet li { border-bottom: 1px solid #bbb; height: 9mm; }
+    }
+  </style>
+  <script src="./quiz.js"></script>
+</Layout>

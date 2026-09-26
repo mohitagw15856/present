@@ -1,0 +1,11 @@
+{
+  "name": "@present/table-quiz",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A pub-quiz round about the people at the table. One phone reads, everyone writes.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

@@ -31,6 +31,16 @@ Edit [`data/noticing-cards.json`](data/noticing-cards.json):
 
 Cards ask the reader to notice something in the physical room or the people in it. They never ask the reader to use a phone.
 
+### Add a Table Quiz question
+
+Edit [`data/table-quiz.json`](data/table-quiz.json):
+
+```json
+{ "text": "Who at this table has broken a bone?" }
+```
+
+Every answer must be a person at the table. Keep it safe to ask a mixed group of friends, family and colleagues; the fun is in the owning-up, not the exposure.
+
 ### Add a Grey Mode setup
 
 Add a section to [`tools/grey-mode/README.md`](tools/grey-mode/README.md) following its own contributing note. Screenshots are welcome; put them in `tools/grey-mode/screenshots/`.

@@ -21,6 +21,7 @@
     "@present/noticing-cards": "workspace:*",
     "@present/walk-and-talk": "workspace:*",
     "@present/presence-ledger": "workspace:*",
-    "@present/analog-hour": "workspace:*"
+    "@present/analog-hour": "workspace:*",
+    "@present/table-quiz": "workspace:*"
   }
 }

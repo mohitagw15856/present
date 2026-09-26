@@ -60,6 +60,13 @@ export const tools = [
     accent: 'sand',
   },
   {
+    slug: 'table-quiz',
+    name: 'Table Quiz',
+    description: 'A pub-quiz round about the people at the table. One phone reads, everyone writes.',
+    kind: 'web',
+    accent: 'blush',
+  },
+  {
     slug: 'slow-browser',
     name: 'Slow Browser',
     description: 'A browser extension that puts a ten-second breath in front of infinite scroll.',
