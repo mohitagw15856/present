@@ -1,0 +1,14 @@
+{
+  "name": "@present/guest-book",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A printable page for the fridge: who came round this month.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}
