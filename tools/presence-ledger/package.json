@@ -1,0 +1,11 @@
+{
+  "name": "@present/presence-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Three lines per real conversation. A quiet monthly count. Stays on your device.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

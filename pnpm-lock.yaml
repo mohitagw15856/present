@@ -186,6 +186,9 @@ importers:
       '@present/phone-parking':
         specifier: workspace:*
         version: link:../tools/phone-parking
+      '@present/presence-ledger':
+        specifier: workspace:*
+        version: link:../tools/presence-ledger
       '@present/shared':
         specifier: workspace:*
         version: link:../packages/shared
@@ -234,6 +237,12 @@ importers:
       jspdf:
         specifier: ^4.2.1
         version: 4.2.1
+
+  tools/presence-ledger:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
 
   tools/table-pact:
     dependencies:

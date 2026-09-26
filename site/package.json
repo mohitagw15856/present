@@ -19,6 +19,7 @@
     "@present/conversation-roulette": "workspace:*",
     "@present/phone-parking": "workspace:*",
     "@present/noticing-cards": "workspace:*",
-    "@present/walk-and-talk": "workspace:*"
+    "@present/walk-and-talk": "workspace:*",
+    "@present/presence-ledger": "workspace:*"
   }
 }

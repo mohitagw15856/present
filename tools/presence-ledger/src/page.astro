@@ -1,0 +1,71 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Presence Ledger" description="Three lines per real conversation. A quiet monthly count. Stays on your device." tool>
+  <div class="flex flex-col gap-10">
+    <div>
+      <p class="eyebrow mb-3">Presence Ledger</p>
+      <h1 class="display text-4xl sm:text-5xl">Three lines, after a real conversation.</h1>
+    </div>
+
+    <form id="entry" class="card p-5 sm:p-6 flex flex-col gap-4" autocomplete="off">
+      <label class="block">
+        <span class="eyebrow block mb-2">Who I was with</span>
+        <input class="field" type="text" name="who" maxlength="80" placeholder="Ana and Ben" required enterkeyhint="next" />
+      </label>
+      <label class="block">
+        <span class="eyebrow block mb-2">What we talked about</span>
+        <input class="field" type="text" name="about" maxlength="140" placeholder="Her new job, whether to move" required enterkeyhint="next" />
+      </label>
+      <label class="block">
+        <span class="eyebrow block mb-2">One thing I noticed</span>
+        <input class="field" type="text" name="noticed" maxlength="140" placeholder="She laughs before the punchline" required enterkeyhint="done" />
+      </label>
+      <label class="block">
+        <span class="eyebrow block mb-2">When</span>
+        <input class="field" type="date" name="date" required />
+      </label>
+      <button type="submit" class="btn btn-primary self-start">Add to the ledger</button>
+    </form>
+
+    <section aria-labelledby="month-h" class="flex flex-col gap-5">
+      <div class="flex items-center justify-between gap-3">
+        <button type="button" class="btn min-h-11 px-4" data-action="prev" aria-label="Previous month">←</button>
+        <h2 id="month-h" class="display text-2xl text-center" data-bind="month"></h2>
+        <button type="button" class="btn min-h-11 px-4" data-action="next" aria-label="Next month">→</button>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div class="card p-5">
+          <p class="display text-4xl" data-bind="count">0</p>
+          <p class="text-muted text-[15px] mt-1">real conversations</p>
+        </div>
+        <div class="card p-5">
+          <p class="eyebrow mb-2">Most often</p>
+          <p class="leading-relaxed" data-bind="people">—</p>
+        </div>
+      </div>
+
+      <ul id="entries" class="flex flex-col gap-3"></ul>
+      <p class="text-muted text-center py-6" data-bind="empty" hidden>Nothing here yet.</p>
+    </section>
+
+    <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-line">
+      <button type="button" class="btn" data-action="export">Export as Markdown</button>
+      <span class="text-muted text-sm">Stored only in this browser · <span data-bind="total">0</span> entries in total</span>
+    </div>
+  </div>
+
+  <template id="entry-tpl">
+    <li class="card p-5 flex flex-col gap-1">
+      <div class="flex items-baseline justify-between gap-3">
+        <p class="font-medium" data-slot="who"></p>
+        <time class="text-muted text-sm shrink-0" data-slot="date"></time>
+      </div>
+      <p data-slot="about"></p>
+      <p class="text-muted" data-slot="noticed"></p>
+      <button type="button" class="btn btn-quiet min-h-11 self-end -mb-2 -mr-3 text-sm" data-remove>Remove</button>
+    </li>
+  </template>
+  <script src="./ledger.js"></script>
+</Layout>
