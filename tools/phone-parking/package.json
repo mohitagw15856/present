@@ -1,0 +1,12 @@
+{
+  "name": "@present/phone-parking",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Printable “phones rest here” signs and table cards, as a PDF.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

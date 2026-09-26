@@ -1,0 +1,98 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { templates, colours } from './templates.js';
+---
+<Layout title="Phone Parking Signs" description="Printable “phones rest here” signs and table cards, as a PDF." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Phone Parking Signs</p>
+      <h1 class="display text-4xl sm:text-5xl">A place for phones to rest.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Pick a template, change the words, print it, and put it where the phones should go.</p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-[1fr_minmax(0,22rem)] md:items-start">
+      <!-- Preview -->
+      <div>
+        <p class="eyebrow mb-3">Preview</p>
+        <div id="preview" class="sign relative mx-auto w-full max-w-sm shadow-soft rounded-lg overflow-hidden" data-format="sign" style="background:#fbf8f2;color:#2b2823">
+          <div class="sign-face absolute inset-0 flex flex-col items-center justify-center text-center p-[8%]">
+            <svg class="w-[38%] mb-[6%]" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="46" data-fill="fill" fill="#c9d8c8"/>
+              <rect x="22" y="58" width="56" height="16" rx="5" data-fill="deep" fill="#5b7460"/>
+              <rect x="27" y="61" width="46" height="10" rx="3" fill="#fbf8f2" opacity=".9"/>
+            </svg>
+            <p class="sign-heading font-medium leading-[1.05] tracking-tight text-[9cqw]" data-out="heading"></p>
+            <p class="sign-line mt-[4%] leading-snug text-[4.6cqw]" data-out="line"></p>
+            <p class="sign-small mt-auto pt-[6%] text-[3.2cqw]" data-out="small" style="color:#7a736a"></p>
+          </div>
+          <div class="sign-face sign-face-top absolute inset-0 hidden flex-col items-center justify-center text-center p-[8%]" aria-hidden="true">
+            <p class="sign-heading font-medium leading-[1.05] tracking-tight text-[9cqw]" data-out="heading"></p>
+            <p class="sign-line mt-[3%] leading-snug text-[4.6cqw]" data-out="line"></p>
+          </div>
+          <div class="fold-line absolute left-0 right-0 top-1/2 hidden border-t border-dashed" style="border-color:#b3aca1"></div>
+        </div>
+        <p class="text-muted text-sm text-center mt-3" data-out="format-note">A4 portrait</p>
+      </div>
+
+      <!-- Controls -->
+      <form id="controls" class="flex flex-col gap-6" autocomplete="off">
+        <fieldset>
+          <legend class="eyebrow mb-2">Template</legend>
+          <div class="grid grid-cols-2 gap-2" id="templates">
+            {templates.map((t) => (
+              <button type="button" class="btn min-h-12 text-[15px] px-3" data-template={t.id}>{t.name}</button>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="eyebrow mb-2">Format</legend>
+          <div class="grid grid-cols-2 gap-2" id="formats">
+            <button type="button" class="btn min-h-12 text-[15px]" data-format="sign">Sign</button>
+            <button type="button" class="btn min-h-12 text-[15px]" data-format="card">Table card</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="eyebrow mb-2">Colour</legend>
+          <div class="flex gap-3" id="colours">
+            {Object.entries(colours).map(([id, c]) => (
+              <button type="button" class="h-12 w-12 rounded-full border-2 border-transparent" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name}></button>
+            ))}
+          </div>
+        </fieldset>
+
+        <label class="block">
+          <span class="eyebrow block mb-2">Heading</span>
+          <input class="field" type="text" maxlength="28" data-in="heading" />
+        </label>
+        <label class="block">
+          <span class="eyebrow block mb-2">Line</span>
+          <textarea class="field min-h-20" rows="2" maxlength="90" data-in="line"></textarea>
+        </label>
+        <label class="block">
+          <span class="eyebrow block mb-2">Small print</span>
+          <input class="field" type="text" maxlength="60" data-in="small" />
+        </label>
+
+        <button type="button" class="btn btn-primary text-lg py-4" data-action="download">Download PDF</button>
+        <p class="text-muted text-sm">Drawn on your device. Nothing is uploaded.</p>
+      </form>
+    </div>
+  </div>
+
+  <style>
+    .sign { container-type: inline-size; aspect-ratio: 210 / 297; }
+    .sign[data-format="card"] { aspect-ratio: 297 / 210; }
+    .sign[data-format="card"] .sign-face { top: 50%; padding: 4% 8%; }
+    .sign[data-format="card"] .sign-face svg { display: none; }
+    .sign[data-format="card"] .sign-face-top { display: flex; top: 0; bottom: 50%; transform: rotate(180deg); }
+    .sign[data-format="card"] .fold-line { display: block; }
+    .sign[data-format="card"] .sign-heading { font-size: 7cqw; }
+    .sign[data-format="card"] .sign-line { font-size: 3.6cqw; }
+    .sign[data-format="card"] .sign-small { font-size: 2.6cqw; padding-top: 3%; }
+    #templates .btn-primary, #formats .btn-primary { pointer-events: none; }
+    #colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }
+  </style>
+  <script src="./signs.js"></script>
+</Layout>
