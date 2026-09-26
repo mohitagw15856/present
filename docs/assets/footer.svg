@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200" role="img" aria-label="Now put the phone down">
+  <style>
+    .t { font-family: Inter, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: #2b2823; font-size: 40px; font-weight: 500; letter-spacing: -1px; }
+  </style>
+  <rect width="1200" height="200" rx="28" fill="#fbf8f2"/>
+  <!-- table edge -->
+  <rect x="80" y="140" width="1040" height="6" rx="3" fill="#dfc9a4"/>
+  <!-- phone slides in from the right and lies down on the table -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="1250 60;1000 60;1000 60;1250 60" keyTimes="0;0.35;0.85;1" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.2 0.7 0.2 1;0 0 1 1;0.4 0 1 0.6"/>
+    <rect x="-52" y="60" width="104" height="18" rx="6" fill="#557084"/>
+    <rect x="-44" y="64" width="88" height="10" rx="4" fill="#fbf8f2" opacity="0.9"/>
+  </g>
+  <text class="t" x="80" y="112">Now put the phone down.</text>
+  <text class="t" x="80" y="112" fill="#a9bfa8" opacity="0">Thank you.
+    <animate attributeName="opacity" values="0;0;0;1;1;0" keyTimes="0;0.5;0.6;0.7;0.9;1" dur="9s" repeatCount="indefinite"/>
+  </text>
+</svg>

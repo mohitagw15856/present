@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="103" height="24" role="img" aria-label="accounts: 0">
+  <rect width="103" height="24" rx="12" fill="#f5efe4"/>
+  <rect x="76" width="27" height="24" rx="12" fill="#ebcaca"/>
+  <rect x="76" width="12" height="24" fill="#ebcaca"/>
+  <g font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500">
+    <text x="38" y="16" text-anchor="middle" fill="#7a736a">accounts</text>
+    <text x="89" y="16" text-anchor="middle" fill="#2b2823">0</text>
+  </g>
+</svg>

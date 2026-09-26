@@ -7,6 +7,7 @@ All notable changes to this project are documented here. The format follows [Kee
 ### Changed
 
 - README rewritten with a lighter voice; title capitalised.
+- README gains an animated SVG banner and footer, hand-drawn badges, a mermaid review flowchart, five recorded GIFs and collapsible explainers (docs/assets).
 
 ### Added
 
