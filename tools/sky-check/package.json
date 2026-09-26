@@ -1,0 +1,13 @@
+{
+  "name": "@present/sky-check",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tonight\u2019s sunset and golden hour, worked out on your device. No weather, no alerts.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

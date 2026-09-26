@@ -1,0 +1,33 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Sky Check" description="Tonight’s sunset and golden hour, worked out on your device. No weather, no alerts." tool>
+  <div class="min-h-[70dvh] flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Sky Check</p>
+      <h1 class="display text-4xl sm:text-5xl">When does the light go?</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Sunset and golden hour for where you are, calculated on this device from your position and the date. Nothing is looked up, and nothing will remind you. You have to remember to look, which is the point.</p>
+    </div>
+    <section data-view="ask" class="flex flex-col gap-4">
+      <button type="button" class="btn btn-primary text-lg py-4 self-start" data-action="locate">Use my position, once</button>
+      <p class="text-muted text-sm">Your latitude and longitude are rounded to about 10 km and kept only in this browser. You can also type them in.</p>
+      <form id="manual" class="grid grid-cols-2 gap-3 max-w-sm" autocomplete="off">
+        <input class="field" name="lat" type="number" step="0.1" min="-90" max="90" placeholder="Latitude" required />
+        <input class="field" name="lng" type="number" step="0.1" min="-180" max="180" placeholder="Longitude" required />
+        <button type="submit" class="btn col-span-2">Use these</button>
+      </form>
+      <p class="text-rose-ink" data-bind="err" hidden></p>
+    </section>
+    <section data-view="sky" class="flex flex-col gap-5" hidden>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="card p-5"><p class="eyebrow mb-1">Golden hour from</p><p class="display text-4xl" data-bind="golden"></p></div>
+        <div class="card p-5"><p class="eyebrow mb-1">Sunset</p><p class="display text-4xl" data-bind="sunset"></p></div>
+        <div class="card p-5"><p class="eyebrow mb-1">Dark by</p><p class="display text-4xl" data-bind="dusk"></p></div>
+        <div class="card p-5"><p class="eyebrow mb-1">Sunrise tomorrow</p><p class="display text-4xl" data-bind="sunrise"></p></div>
+      </div>
+      <p class="text-lg" data-bind="verdict"></p>
+      <p class="text-muted text-sm">For <span data-bind="where"></span>. Weather is what the window is for. <button type="button" class="underline" data-action="reset">Change position</button></p>
+    </section>
+  </div>
+  <script src="./sky-check.js"></script>
+</Layout>
