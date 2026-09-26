@@ -8,3 +8,4 @@ All notable changes to this project are documented here. The format follows [Kee
 
 - Monorepo scaffold: pnpm workspaces, Astro site, shared design tokens, service worker, GitHub Pages workflow.
 - Landing page with manifesto and tool cards; philosophy page.
+- Table Pact: shared table timer with QR join, pick-up detection, forfeit summary.

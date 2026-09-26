@@ -1,0 +1,100 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Table Pact" description="One timer for the whole table. Phones down; the first to pick up owes a forfeit." tool>
+  <div id="app" data-state="loading" class="min-h-[70dvh] flex flex-col">
+
+    <!-- Setup -->
+    <section data-view="setup" class="flex-1 flex flex-col gap-8" hidden>
+      <div>
+        <p class="eyebrow mb-3">Table Pact</p>
+        <h1 class="display text-4xl sm:text-5xl">Phones down. One timer for all of us.</h1>
+        <p class="mt-4 text-muted text-lg max-w-md">Start the pact, let everyone scan the code, then put every phone face up in the middle of the table.</p>
+      </div>
+
+      <form id="setup-form" class="flex flex-col gap-6" autocomplete="off">
+        <label class="block">
+          <span class="eyebrow block mb-2">Your name</span>
+          <input id="host-name" class="field text-lg" type="text" maxlength="24" placeholder="Optional" enterkeyhint="done" />
+        </label>
+
+        <fieldset>
+          <legend class="eyebrow mb-2">How long</legend>
+          <div class="grid grid-cols-3 gap-3" id="durations">
+            <button type="button" class="btn" data-min="20">20 min</button>
+            <button type="button" class="btn" data-min="30">30 min</button>
+            <button type="button" class="btn" data-min="45">45 min</button>
+            <button type="button" class="btn" data-min="60">1 hour</button>
+            <button type="button" class="btn" data-min="90">1½ hours</button>
+            <button type="button" class="btn" data-min="120">2 hours</button>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary text-lg py-4">Start the pact</button>
+      </form>
+    </section>
+
+    <!-- Join (arrived via link) -->
+    <section data-view="join" class="flex-1 flex flex-col gap-8" hidden>
+      <div>
+        <p class="eyebrow mb-3">Table Pact</p>
+        <h1 class="display text-4xl">You've been invited to put your phone down.</h1>
+        <p class="mt-4 text-muted text-lg"><span data-bind="host-line">Someone</span> started a <span data-bind="join-duration"></span> pact.</p>
+      </div>
+      <form id="join-form" class="flex flex-col gap-6" autocomplete="off">
+        <label class="block">
+          <span class="eyebrow block mb-2">Your name</span>
+          <input id="join-name" class="field text-lg" type="text" maxlength="24" placeholder="Optional" enterkeyhint="done" />
+        </label>
+        <button type="submit" class="btn btn-primary text-lg py-4">Join the pact</button>
+      </form>
+    </section>
+
+    <!-- Running -->
+    <section data-view="running" class="flex-1 flex flex-col" hidden>
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="eyebrow">Table Pact · <span data-bind="code"></span></p>
+          <p class="text-muted mt-1" data-bind="status-line">Phones down in a minute.</p>
+        </div>
+        <button type="button" class="btn btn-quiet min-h-11 px-3" data-action="toggle-qr" aria-expanded="false">Show code</button>
+      </div>
+
+      <div data-bind="qr-panel" class="card mt-5 p-5 flex flex-col items-center gap-4 print:block" hidden>
+        <div data-bind="qr" class="w-56 h-56 [&>svg]:w-full [&>svg]:h-full rounded-lg overflow-hidden bg-white p-2"></div>
+        <p class="text-center text-muted text-sm break-all leading-snug select-all" data-bind="link"></p>
+      </div>
+
+      <div class="flex-1 flex flex-col items-center justify-center py-10">
+        <p class="display text-[22vw] sm:text-[9rem] leading-none tabular-nums tracking-tight" data-bind="clock" aria-live="off">30:00</p>
+        <p class="mt-6 text-lg text-center text-muted" data-bind="me-line"></p>
+      </div>
+
+      <div data-bind="table" class="text-muted text-center text-[15px] leading-relaxed"></div>
+
+      <div class="mt-8 flex justify-center">
+        <button type="button" class="btn btn-quiet" data-action="end-early">End the pact early</button>
+      </div>
+    </section>
+
+    <!-- Summary -->
+    <section data-view="summary" class="flex-1 flex flex-col gap-8" hidden>
+      <div>
+        <p class="eyebrow mb-3">Table Pact · finished</p>
+        <h1 class="display text-4xl" data-bind="summary-title">You kept the pact.</h1>
+        <p class="mt-4 text-lg text-muted" data-bind="summary-detail"></p>
+      </div>
+      <div class="card p-6">
+        <p class="eyebrow mb-2" data-bind="forfeit-label">Forfeit</p>
+        <p class="text-2xl leading-snug" data-bind="forfeit"></p>
+      </div>
+      <p class="text-muted text-[15px]">Each phone keeps its own score. If someone's phone says they kept it and the table disagrees, the table is right.</p>
+      <div class="flex gap-3 flex-wrap">
+        <a href="./" class="btn btn-primary">Start another</a>
+        <a href="../" class="btn">Back to present</a>
+      </div>
+    </section>
+
+  </div>
+  <script src="./pact.js"></script>
+</Layout>

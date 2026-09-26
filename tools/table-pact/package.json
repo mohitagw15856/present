@@ -1,0 +1,12 @@
+{
+  "name": "@present/table-pact",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One timer for the whole table. Phones down; the first to pick up owes a forfeit.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "qrcode": "^1.5.4"
+  }
+}
