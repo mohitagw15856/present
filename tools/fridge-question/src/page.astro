@@ -1,0 +1,27 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Fridge Question" description="This week’s question in 90-point type, sized for a fridge door." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Fridge Question · <span data-bind="week"></span></p>
+      <h1 class="display text-4xl sm:text-5xl leading-[1.1]" data-bind="q"></h1>
+      <p class="mt-4 text-muted text-lg max-w-md">The same question for everyone this week, chosen from the date. Print it on Sunday. Argue about it until Saturday.</p>
+    </div>
+    <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+    <div class="flex flex-wrap gap-3 items-center">
+      <button type="button" class="btn btn-primary" data-action="pdf">Download the poster (PDF)</button>
+      <span class="text-muted text-sm">A4 portrait, very large type.</span>
+    </div>
+  </div>
+  <script src="./fridge-question.js"></script>
+</Layout>

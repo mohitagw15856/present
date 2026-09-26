@@ -1,0 +1,14 @@
+{
+  "name": "@present/fridge-question",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "This week\u2019s question in 90-point type, sized for a fridge door.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}
