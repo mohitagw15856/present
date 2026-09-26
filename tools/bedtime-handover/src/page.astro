@@ -1,0 +1,28 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Bedtime Handover" description="Two ticks each night: phone is in the kitchen, alarm is on the clock. No history." tool>
+  <div id="app" class="min-h-[70dvh] flex flex-col">
+    <section data-view="check" class="flex-1 flex flex-col gap-8 justify-center">
+      <div>
+        <p class="eyebrow mb-3">Bedtime Handover</p>
+        <h1 class="display text-4xl sm:text-5xl">Two things, then bed.</h1>
+      </div>
+      <form id="f" class="flex flex-col gap-3">
+        <label class="card p-5 flex items-center gap-4 text-lg cursor-pointer">
+          <input type="checkbox" name="a" class="h-7 w-7 accent-[var(--accent)]" />
+          <input type="text" name="ta" class="bg-transparent flex-1 outline-none" maxlength="60" aria-label="First item" />
+        </label>
+        <label class="card p-5 flex items-center gap-4 text-lg cursor-pointer">
+          <input type="checkbox" name="b" class="h-7 w-7 accent-[var(--accent)]" />
+          <input type="text" name="tb" class="bg-transparent flex-1 outline-none" maxlength="60" aria-label="Second item" />
+        </label>
+      </form>
+      <p class="text-muted text-[15px]">Edit the wording if your house is different. Ticks are never saved; the words are.</p>
+    </section>
+    <section data-view="night" class="fixed inset-0 flex items-center justify-center" style="background:#050403;color:#f1dfc4" hidden>
+      <button type="button" class="display text-6xl sm:text-8xl opacity-80" data-action="reset">Good night.</button>
+    </section>
+  </div>
+  <script src="./bedtime-handover.js"></script>
+</Layout>

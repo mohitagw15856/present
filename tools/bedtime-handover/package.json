@@ -1,0 +1,13 @@
+{
+  "name": "@present/bedtime-handover",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Two ticks each night: phone is in the kitchen, alarm is on the clock. No history.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}
