@@ -1,0 +1,128 @@
+/*
+  present — design tokens
+  Scandinavian and calm. Muted pastels on warm cream; dark mode is candlelight.
+  Everything downstream (Tailwind utilities, tool styles, PDFs) reads from here.
+*/
+
+:root {
+  /* Palette — raw swatches */
+  --p-cream-50: #fbf8f2;
+  --p-cream-100: #f5efe4;
+  --p-cream-200: #ebe2d2;
+  --p-cream-300: #ddd1bc;
+
+  --p-sage-100: #e3ebe2;
+  --p-sage-200: #c9d8c8;
+  --p-sage-300: #a9bfa8;
+  --p-sage-400: #86a087;
+  --p-sage-600: #5b7460;
+
+  --p-blush-100: #f5e4e4;
+  --p-blush-200: #ebcaca;
+  --p-blush-300: #dcaaab;
+  --p-blush-400: #c98d8f;
+  --p-blush-600: #8f5c5f;
+
+  --p-mist-100: #e4ecf2;
+  --p-mist-200: #c9d8e4;
+  --p-mist-300: #a8bfd1;
+  --p-mist-400: #86a3ba;
+  --p-mist-600: #557084;
+
+  --p-sand-200: #efe0c8;
+  --p-sand-300: #dfc9a4;
+  --p-sand-400: #c9ac7c;
+
+  --p-ink-900: #2b2823;
+  --p-ink-700: #4a453d;
+  --p-ink-500: #7a736a;
+  --p-ink-300: #b3aca1;
+
+  /* Candlelight (dark) */
+  --p-candle-900: #1c1613;
+  --p-candle-800: #26201b;
+  --p-candle-700: #332b24;
+  --p-candle-600: #47392f;
+  --p-flame-200: #f1dfc4;
+  --p-flame-300: #e0c39a;
+  --p-flame-400: #c9a071;
+  --p-ash-400: #a89a88;
+
+  /* Semantic — light */
+  --bg: var(--p-cream-50);
+  --surface: #ffffff;
+  --surface-2: var(--p-cream-100);
+  --text: var(--p-ink-900);
+  --text-muted: var(--p-ink-500);
+  --line: var(--p-cream-300);
+  --accent: var(--p-sage-400);
+  --accent-soft: var(--p-sage-100);
+  --accent-ink: var(--p-sage-600);
+  --rose: var(--p-blush-400);
+  --rose-soft: var(--p-blush-100);
+  --rose-ink: var(--p-blush-600);
+  --sky: var(--p-mist-400);
+  --sky-soft: var(--p-mist-100);
+  --sky-ink: var(--p-mist-600);
+  --sand-soft: var(--p-sand-200);
+  --focus: var(--p-mist-400);
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--p-candle-900);
+    --surface: var(--p-candle-800);
+    --surface-2: var(--p-candle-700);
+    --text: var(--p-flame-200);
+    --text-muted: var(--p-ash-400);
+    --line: var(--p-candle-600);
+    --accent: var(--p-sage-300);
+    --accent-soft: #2a3128;
+    --accent-ink: var(--p-sage-200);
+    --rose: var(--p-blush-300);
+    --rose-soft: #3a2a2a;
+    --rose-ink: var(--p-blush-200);
+    --sky: var(--p-mist-300);
+    --sky-soft: #26303a;
+    --sky-ink: var(--p-mist-200);
+    --sand-soft: var(--p-candle-600);
+    --focus: var(--p-flame-300);
+  }
+}
+
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-rose: var(--rose);
+  --color-rose-soft: var(--rose-soft);
+  --color-rose-ink: var(--rose-ink);
+  --color-sky: var(--sky);
+  --color-sky-soft: var(--sky-soft);
+  --color-sky-ink: var(--sky-ink);
+  --color-sand-soft: var(--sand-soft);
+  --color-focus: var(--focus);
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-transparent: transparent;
+
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --shadow-soft: 0 1px 2px rgb(43 40 35 / 0.04), 0 8px 24px rgb(43 40 35 / 0.06);
+
+  --ease-calm: cubic-bezier(0.25, 0.1, 0.25, 1);
+}

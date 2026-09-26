@@ -1,0 +1,59 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { tools, toolHref, repoUrl } from '@present/shared/tools';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const accentClass = {
+  sage: 'bg-accent-soft text-accent-ink',
+  blush: 'bg-rose-soft text-rose-ink',
+  mist: 'bg-sky-soft text-sky-ink',
+  sand: 'bg-sand-soft text-text',
+};
+---
+<Layout title="present" description="Small, no-account, no-tracking tools that help people put their phones down and be with the people around them.">
+  <section class="pt-8 sm:pt-16 pb-12 sm:pb-16">
+    <p class="eyebrow mb-4">present</p>
+    <h1 class="display text-4xl sm:text-5xl max-w-xl">Tools for putting the phone down.</h1>
+    <div class="mt-8 max-w-xl space-y-4 text-lg leading-relaxed text-text/90">
+      <p>
+        The people in front of us are the rarest thing we have, and the easiest to look past.
+        A glance at a screen is small. A thousand glances is a dinner nobody remembers.
+      </p>
+      <p>
+        These are small tools for the moment before the glance. None of them want your attention.
+        There are no accounts, no feeds, no streaks, no notifications, and nothing leaves your device.
+        If a tool needs the phone at all, it needs it for seconds.
+      </p>
+      <p>
+        Use one, then put the phone face down. That is the whole point.
+      </p>
+    </div>
+  </section>
+
+  <section aria-labelledby="tools-heading">
+    <h2 id="tools-heading" class="eyebrow mb-5">Ten tools</h2>
+    <ul class="grid gap-4 sm:grid-cols-2">
+      {tools.map((t, i) => (
+        <li>
+          <a
+            href={toolHref(t, base)}
+            class="card block p-5 sm:p-6 min-h-36 hover:-translate-y-0.5 transition-transform duration-200 ease-[var(--ease-calm)] focus-visible:outline-offset-4"
+            rel={t.kind === 'external' ? 'noopener' : undefined}
+          >
+            <div class="flex items-center gap-3 mb-3">
+              <span class={`inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-medium ${accentClass[t.accent]}`}>{i + 1}</span>
+              <h3 class="text-lg font-medium">{t.name}</h3>
+            </div>
+            <p class="text-muted leading-relaxed">{t.description}</p>
+            {t.kind === 'external' && <p class="mt-3 text-sm text-muted">On GitHub ↗</p>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <footer class="mt-20 pt-8 border-t border-line flex flex-wrap gap-x-6 gap-y-3 text-muted text-[15px]">
+    <a href={`${base}philosophy/`} class="hover:text-text min-h-11 inline-flex items-center">Philosophy</a>
+    <a href={repoUrl} rel="noopener" class="hover:text-text min-h-11 inline-flex items-center">GitHub</a>
+    <span class="min-h-11 inline-flex items-center">Open source · MIT · No tracking</span>
+  </footer>
+</Layout>

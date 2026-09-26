@@ -1,0 +1,13 @@
+{
+  "name": "present",
+  "short_name": "present",
+  "description": "Small tools that help you put the phone down.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fbf8f2",
+  "theme_color": "#fbf8f2",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

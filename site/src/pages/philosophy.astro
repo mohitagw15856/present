@@ -1,0 +1,65 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { repoUrl } from '@present/shared/tools';
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+<Layout title="Philosophy" description="The design principles behind present." tool>
+  <article class="prose-present max-w-xl">
+    <p class="eyebrow mb-4">Philosophy</p>
+    <h1 class="display text-4xl mb-8">Restraint is the product.</h1>
+
+    <h2>Every tool must reduce time on screen</h2>
+    <p>
+      This is the only test. A tool can be clever, beautiful and useful, and still fail it.
+      If using the tool means looking at a phone for longer than not using it, the tool does not belong here.
+      Most of these tools want to be used for under a minute and then ignored.
+    </p>
+
+    <h2>No accounts, no tracking, no backend</h2>
+    <p>
+      Nothing here needs to know who you are. There are no servers, no analytics, no cookies.
+      The only place anything is remembered is your own device, in plain local storage that you can clear.
+      Every tool works offline once it has loaded.
+    </p>
+
+    <h2>No feeds, no streaks, no notifications</h2>
+    <p>
+      These are the three mechanics that turn a tool into a habit. We use none of them.
+      Nothing scrolls forever. Nothing counts your consecutive days. Nothing will ever buzz to bring you back.
+      If a tool keeps a record, it shows you a plain count, once, when you ask.
+    </p>
+
+    <h2>Read aloud, not read alone</h2>
+    <p>
+      Wherever possible a tool produces something to be said out loud, printed, or handed to someone else.
+      Large type that can be read from across a table. Prompts that make sense spoken.
+      Paper where paper is better.
+    </p>
+
+    <h2>Calm by design</h2>
+    <p>
+      Muted colour on warm cream. Generous space. One typeface. Nothing flashes, bounces or begs.
+      Dark mode is candlelight, not a terminal. Touch targets are large enough for a phone held at arm's length,
+      because that is how far away we hope it stays.
+    </p>
+
+    <h2>Honour, not enforcement</h2>
+    <p>
+      Nothing here can stop you picking up your phone, and nothing tries very hard to. The tools trust the people
+      using them. Where they measure anything, they measure gently and forget quickly.
+    </p>
+
+    <p class="mt-10">
+      Contributors: please read <a href={`${repoUrl}/blob/main/docs/principles.md`} rel="noopener">docs/principles.md</a>
+      before proposing a new tool.
+    </p>
+    <p class="mt-6"><a href={base}>← Back to the tools</a></p>
+  </article>
+</Layout>
+
+<style>
+  .prose-present h2 { font-weight: 500; font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+  .prose-present p { color: var(--text); opacity: 0.9; line-height: 1.7; margin-bottom: 1rem; font-size: 1.0625rem; }
+  .prose-present a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
+  .prose-present a:hover { text-decoration-color: var(--accent); }
+</style>

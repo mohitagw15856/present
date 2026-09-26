@@ -1,0 +1,17 @@
+{
+  "name": "present",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Small, no-account, no-tracking web tools that help people put their phones down.",
+  "license": "MIT",
+  "packageManager": "pnpm@12.6.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "pnpm --filter @present/site dev",
+    "build": "pnpm --filter @present/site build",
+    "preview": "pnpm --filter @present/site preview",
+    "build:extension": "pnpm --filter @present/slow-browser build",
+    "deploy:github": "pnpm build && npx --yes gh-pages -d site/dist --nojekyll --dotfiles",
+    "deploy:cloudflare": "pnpm build && npx --yes wrangler pages deploy site/dist --project-name present"
+  }
+}
