@@ -1,0 +1,14 @@
+{
+  "name": "@present/venue-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "How to run a phone-free hour in a caf\u00e9 or pub, with an A3 poster to print.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

@@ -1,0 +1,43 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Presence Kit for Venues" description="How to run a phone-free hour in a café or pub, with an A3 poster to print." tool>
+  <div class="flex flex-col gap-10">
+    <div>
+      <p class="eyebrow mb-3">Presence Kit for Venues</p>
+      <h1 class="display text-4xl sm:text-5xl">Run a phone-free hour.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">For cafés, pubs, libraries and community rooms. One hour a week where the phones go in the middle of the table and the room gets louder in the right way. Everything here is free and prints on the machine in the back office.</p>
+    </div>
+    <ol class="flex flex-col gap-4 text-lg leading-relaxed">
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">1</span><span><strong>Pick a quiet hour.</strong> Tuesday early evening works. You are not replacing your busiest hour, you are filling an empty one with regulars who talk.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">2</span><span><strong>Print the poster</strong> below for the door and window, and a <a class="underline" href="../phone-parking/">Phone Parking table card</a> for every table. The café template is written for you.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">3</span><span><strong>Give every table something to do.</strong> A <a class="underline" href="../noticing-cards/">Noticing Cards</a> deck and a few <a class="underline" href="../placemats/">placemats</a>. Or run a <a class="underline" href="../table-quiz/">Table Quiz</a> round from behind the counter.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">4</span><span><strong>Offer one thing.</strong> A free refill, a biscuit, ten percent off for tables that keep the pact. It costs almost nothing and it gives people a reason to explain the hour to their friends.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">5</span><span><strong>Do not enforce it.</strong> Nobody is told off. The signs ask, the room does the rest. If a table wants to scroll, let them. They will notice they are the only ones.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">6</span><span><strong>Tell people in the room, not online.</strong> The poster, a chalkboard, a word from whoever takes the orders. It should feel like a thing that happens here, not a campaign.</span></li>
+    </ol>
+    <form id="f" class="flex flex-col gap-6" autocomplete="off">
+      <p class="eyebrow">The poster</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <label class="block"><span class="eyebrow block mb-2">Venue</span><input class="field" name="venue" maxlength="36" placeholder="The Corner Café" /></label>
+        <label class="block"><span class="eyebrow block mb-2">When</span><input class="field" name="when" maxlength="36" placeholder="Tuesdays, 6 to 7pm" /></label>
+      </div>
+      <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'blush' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+      <div class="flex flex-wrap gap-3">
+        <button type="button" class="btn btn-primary text-lg py-4" data-action="pdf">Download the poster (A3 PDF)</button>
+        <button type="button" class="btn text-lg py-4" data-action="pdf-a4">A4 version</button>
+      </div>
+      <p class="text-muted text-sm">Everything else you need is in the <a class="underline" href="../print-pack.pdf">print pack</a>: signs, cards, placemats, coupons and quiz sheets in one file.</p>
+    </form>
+  </div>
+  <script src="./venue-kit.js"></script>
+</Layout>
