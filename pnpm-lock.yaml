@@ -192,6 +192,9 @@ importers:
       '@present/table-pact':
         specifier: workspace:*
         version: link:../tools/table-pact
+      '@present/walk-and-talk':
+        specifier: workspace:*
+        version: link:../tools/walk-and-talk
       '@tailwindcss/vite':
         specifier: ^4.0.0
         version: 4.3.3(vite@6.4.3(jiti@2.7.0)(lightningcss@1.32.0))
@@ -240,6 +243,12 @@ importers:
       qrcode:
         specifier: ^1.5.4
         version: 1.5.4
+
+  tools/walk-and-talk:
+    dependencies:
+      '@present/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
 
 packages:
 

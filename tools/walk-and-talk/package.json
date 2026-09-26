@@ -1,0 +1,11 @@
+{
+  "name": "@present/walk-and-talk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One prompt, then the screen goes dark until the walk is over.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}
