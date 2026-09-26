@@ -1,0 +1,52 @@
+---
+import Layout from '@present/shared/Layout.astro';
+const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+---
+<Layout title="Analog Hour" description="Commit to one offline hour a week. Get a calendar file and a card to share." tool>
+  <div class="flex flex-col gap-10">
+    <div>
+      <p class="eyebrow mb-3">Analog Hour</p>
+      <h1 class="display text-4xl sm:text-5xl">One hour a week, offline.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Pick the hour, put it in your calendar, and tell the people who might want to join you.</p>
+    </div>
+
+    <form id="pick" class="flex flex-col gap-6" autocomplete="off">
+      <fieldset>
+        <legend class="eyebrow mb-2">Every</legend>
+        <div class="grid grid-cols-7 gap-1.5" id="days">
+          {days.map((d, i) => (
+            <button type="button" class={`btn min-h-12 px-0 text-[15px] ${i === 6 ? 'btn-primary' : ''}`} data-day={i}>{d}</button>
+          ))}
+        </div>
+      </fieldset>
+      <div class="grid grid-cols-2 gap-3">
+        <label class="block">
+          <span class="eyebrow block mb-2">From</span>
+          <input class="field" type="time" name="start" value="16:00" step="1800" required />
+        </label>
+        <label class="block">
+          <span class="eyebrow block mb-2">For</span>
+          <select class="field" name="hours">
+            <option value="1" selected>1 hour</option>
+            <option value="2">2 hours</option>
+            <option value="3">3 hours</option>
+          </select>
+        </label>
+      </div>
+    </form>
+
+    <section class="flex flex-col gap-4" aria-labelledby="card-h">
+      <h2 id="card-h" class="eyebrow">Your card</h2>
+      <canvas id="card" width="1080" height="1080" class="w-full max-w-sm mx-auto rounded-xl shadow-soft" aria-label="Shareable card"></canvas>
+      <p class="text-center display text-xl" data-bind="line"></p>
+    </section>
+
+    <div class="flex flex-wrap gap-3">
+      <button type="button" class="btn btn-primary" data-action="ics">Add to calendar (.ics)</button>
+      <button type="button" class="btn" data-action="png">Download card</button>
+      <button type="button" class="btn" data-action="share" hidden>Share card</button>
+    </div>
+    <p class="text-muted text-sm -mt-6">The event repeats weekly in your time zone. Nothing is stored or sent.</p>
+  </div>
+  <script src="./analog.js"></script>
+</Layout>

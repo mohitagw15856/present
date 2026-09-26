@@ -20,6 +20,7 @@
     "@present/phone-parking": "workspace:*",
     "@present/noticing-cards": "workspace:*",
     "@present/walk-and-talk": "workspace:*",
-    "@present/presence-ledger": "workspace:*"
+    "@present/presence-ledger": "workspace:*",
+    "@present/analog-hour": "workspace:*"
   }
 }

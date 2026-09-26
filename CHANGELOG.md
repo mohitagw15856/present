@@ -15,3 +15,4 @@ All notable changes to this project are documented here. The format follows [Kee
 - Noticing Cards: 60-card deck in data/noticing-cards.json, shuffle preview, own cards, A4/Letter PDF with cut lines.
 - Walk & Talk: one prompt, dark screen, halfway vibration, optional one-line note.
 - Presence Ledger: three-field journal, monthly count and most-seen people, Markdown export, local only.
+- Analog Hour: weekly offline hour as .ics (TZID, weekly RRULE) and a shareable PNG card.

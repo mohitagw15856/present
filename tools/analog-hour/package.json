@@ -1,0 +1,11 @@
+{
+  "name": "@present/analog-hour",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Commit to one offline hour a week. Get a calendar file and a card to share.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}
