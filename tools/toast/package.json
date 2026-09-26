@@ -1,0 +1,13 @@
+{
+  "name": "@present/toast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A name, an occasion, one opening line. The rest of the toast is yours.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

@@ -1,0 +1,30 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Toast Generator" description="A name, an occasion, one opening line. The rest of the toast is yours." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Toast Generator</p>
+      <h1 class="display text-4xl sm:text-5xl">The first line is the hard part.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">We will give you one. You stand up, say it, and keep going without us.</p>
+    </div>
+    <form id="f" class="flex flex-col gap-5" autocomplete="off">
+      <label class="block">
+        <span class="eyebrow block mb-2">To</span>
+        <input class="field text-lg" type="text" name="name" maxlength="40" placeholder="A name" required enterkeyhint="done" />
+      </label>
+      <fieldset>
+        <legend class="eyebrow mb-2">Occasion</legend>
+        <div class="grid grid-cols-2 gap-2" id="occasions"></div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary text-lg py-4">Give me an opening</button>
+    </form>
+    <div class="card p-6 sm:p-8" data-bind="out" hidden>
+      <p class="eyebrow mb-3">Your opening line</p>
+      <p class="display text-3xl sm:text-4xl leading-snug" data-bind="line"></p>
+      <p class="mt-6 text-muted">Now put the phone down and finish it. You know them better than we do.</p>
+      <button type="button" class="btn mt-6" data-action="another">A different opening</button>
+    </div>
+  </div>
+  <script src="./toast.js"></script>
+</Layout>
