@@ -1,0 +1,14 @@
+{
+  "name": "@present/charger-station",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Five steps to one charging spot outside the bedroom, plus printable labels.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}

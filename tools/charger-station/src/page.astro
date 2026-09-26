@@ -1,0 +1,39 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Charger Station Kit" description="Five steps to one charging spot outside the bedroom, plus printable labels." tool>
+  <div class="flex flex-col gap-10">
+    <div>
+      <p class="eyebrow mb-3">Charger Station Kit</p>
+      <h1 class="display text-4xl sm:text-5xl">One place where phones sleep.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Not the bedroom. The single most effective change in this whole project, and it costs one extension lead.</p>
+    </div>
+    <ol class="flex flex-col gap-4 text-lg leading-relaxed list-none counter-reset">
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">1</span><span><strong>Pick the spot.</strong> Kitchen counter, hallway shelf, by the front door. Somewhere you pass on the way to bed and never on the way from it.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">2</span><span><strong>One lead, enough plugs.</strong> A multi-port charger or an extension lead with a cable per person. Cables stay here. Nobody “borrows” one upstairs.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">3</span><span><strong>Label it.</strong> Print the labels below: one for the station, one per person. A labelled spot is a spot that gets used.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">4</span><span><strong>Buy an alarm clock.</strong> The only real reason a phone ends up by the bed. Ten pounds, no apps. Put it where the phone used to be.</span></li>
+      <li class="card p-5 flex gap-4"><span class="eyebrow shrink-0 w-6 pt-1">5</span><span><strong>Give it two weeks.</strong> Use the <a class="underline" href="../bedtime-handover/">Bedtime Handover</a> for the first fortnight. After that, the habit does the work.</span></li>
+    </ol>
+    <form id="f" class="flex flex-col gap-6" autocomplete="off">
+      <p class="eyebrow">Labels</p>
+      <div class="grid sm:grid-cols-2 gap-3">
+        <label class="block"><span class="eyebrow block mb-2">Station name</span><input class="field" name="station" maxlength="24" value="Kitchen" /></label>
+        <label class="block"><span class="eyebrow block mb-2">One name per line</span><textarea class="field min-h-28" name="names" placeholder="Mo&#10;Sam&#10;Ana"></textarea></label>
+      </div>
+      <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+      <button type="button" class="btn btn-primary text-lg py-4 self-start" data-action="pdf">Download the labels (PDF)</button>
+      <p class="text-muted text-sm">The <a class="underline" href="../phone-parking/">Phone Parking</a> bedroom sign goes on the bedside table, where the phone used to be.</p>
+    </form>
+  </div>
+  <script src="./charger-station.js"></script>
+</Layout>
