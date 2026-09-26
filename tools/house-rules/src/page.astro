@@ -1,0 +1,37 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="House Rules Card" description="Pick your household’s phone rules, edit the wording, print an A5 card." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">House Rules Card</p>
+      <h1 class="display text-4xl sm:text-5xl">The rules of this house, on one card.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">Tick the ones you mean, change the words, print an A5 card. Stick it where guests will see it.</p>
+    </div>
+    <fieldset>
+      <legend class="eyebrow mb-2">Start from</legend>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="presets">
+        <button type="button" class="btn min-h-12 text-[15px] btn-primary" data-preset="home">Our house</button>
+        <button type="button" class="btn min-h-12 text-[15px]" data-preset="grandparents">Grandparents’</button>
+        <button type="button" class="btn min-h-12 text-[15px]" data-preset="classroom">Classroom</button>
+        <button type="button" class="btn min-h-12 text-[15px]" data-preset="flatshare">Flatshare</button>
+      </div>
+    </fieldset>
+    <form id="f" class="flex flex-col gap-6" autocomplete="off">
+      <label class="block max-w-sm"><span class="eyebrow block mb-2">Household</span><input class="field" name="house" maxlength="30" placeholder="The Agarwals, Flat 3, Room 12…" /></label>
+      <ul id="rules" class="flex flex-col gap-2"></ul>
+      <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+      <button type="button" class="btn btn-primary text-lg py-4 self-start" data-action="pdf">Download the card (PDF)</button>
+    </form>
+  </div>
+  <script src="./house-rules.js"></script>
+</Layout>

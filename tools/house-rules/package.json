@@ -1,0 +1,14 @@
+{
+  "name": "@present/house-rules",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pick your household\u2019s phone rules, edit the wording, print an A5 card.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}
