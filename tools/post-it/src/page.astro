@@ -1,0 +1,32 @@
+---
+import Layout from '@present/shared/Layout.astro';
+import { colours } from '@present/shared/pdf';
+---
+<Layout title="Post It" description="A letter-writing prompt and a one-page template with fold marks. Then a stamp." tool>
+  <div class="flex flex-col gap-8">
+    <div>
+      <p class="eyebrow mb-3">Post It</p>
+      <h1 class="display text-4xl sm:text-5xl">Write to someone. On paper.</h1>
+      <p class="mt-4 text-muted text-lg max-w-md">One prompt, one printed page with lines and fold marks. Address it by hand. Nothing digital leaves.</p>
+    </div>
+    <div class="card p-6 sm:p-8">
+      <p class="eyebrow mb-3">Today’s prompt</p>
+      <p class="display text-3xl sm:text-4xl leading-snug" data-bind="prompt"></p>
+      <button type="button" class="btn btn-quiet mt-4 -ml-3" data-action="another">Another prompt</button>
+    </div>
+    <fieldset>
+  <legend class="eyebrow mb-2">Colour</legend>
+  <div class="flex gap-3" id="colours">
+    {Object.entries(colours).map(([id, c]) => (
+      <button type="button" class="h-12 w-12 rounded-full" data-colour={id} style={`background:${c.fill}`} aria-label={c.name} title={c.name} aria-pressed={id === 'sage' ? 'true' : 'false'}></button>
+    ))}
+  </div>
+</fieldset>
+<style>#colours [aria-pressed="true"] { box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--text); }</style>
+    <div class="flex flex-wrap gap-3 items-center">
+      <button type="button" class="btn btn-primary" data-action="pdf">Download the letter page (PDF)</button>
+      <span class="text-muted text-sm">A4, one page, the prompt printed faintly at the top.</span>
+    </div>
+  </div>
+  <script src="./post-it.js"></script>
+</Layout>

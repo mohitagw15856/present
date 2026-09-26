@@ -1,0 +1,12 @@
+import prompts from '../../../data/letter-prompts.json';
+import { shuffled } from '@present/shared/questions';
+import { pdfButton } from '@present/shared/download';
+const $ = (s) => document.querySelector(s); const $$ = (s) => [...document.querySelectorAll(s)];
+let deck = shuffled(prompts); let prompt = '';
+const render = () => {};
+let colour = 'sage';
+$$('#colours button').forEach((b) => b.addEventListener('click', () => { colour = b.dataset.colour; $$('#colours button').forEach((x) => x.setAttribute('aria-pressed', String(x === b))); render(); }));
+const next = () => { if (!deck.length) deck = shuffled(prompts); prompt = deck.pop().text; $('[data-bind="prompt"]').textContent = prompt; };
+$('[data-action="another"]').addEventListener('click', next);
+pdfButton($('[data-action="pdf"]'), async (jsPDF) => (await import('./pdf.js')).drawLetter(jsPDF, { prompt, colour }), 'letter-page.pdf');
+next();

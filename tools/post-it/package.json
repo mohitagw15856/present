@@ -1,0 +1,14 @@
+{
+  "name": "@present/post-it",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A letter-writing prompt and a one-page template with fold marks. Then a stamp.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*",
+    "jspdf": "^4.2.1"
+  }
+}
