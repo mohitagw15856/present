@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+### Changed
+
+- README rewritten with a lighter voice; title capitalised.
+
 ### Added
 
 - Monorepo scaffold: pnpm workspaces, Astro site, shared design tokens, service worker, GitHub Pages workflow.
