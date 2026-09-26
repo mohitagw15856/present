@@ -1,0 +1,13 @@
+{
+  "name": "@present/direction-dice",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Left, right, straight on, or through the nearest open door. A walk you did not plan.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

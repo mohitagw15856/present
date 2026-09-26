@@ -1,0 +1,15 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Direction Dice" description="Left, right, straight on, or through the nearest open door. A walk you did not plan." tool>
+  <div class="min-h-[70dvh] flex flex-col">
+    <p class="eyebrow">Direction Dice</p>
+    <div class="flex-1 flex flex-col justify-center items-center text-center py-10 gap-6">
+      <p class="display text-5xl sm:text-7xl leading-[1.05]" data-bind="dir" aria-live="polite">Roll.</p>
+      <p class="text-muted text-xl max-w-sm" data-bind="how"></p>
+    </div>
+    <button type="button" class="btn btn-primary text-lg py-5" data-action="roll">Roll the dice</button>
+    <p class="text-muted text-[15px] text-center mt-4">Then put it away until the next corner. Maps stay closed.</p>
+  </div>
+  <script src="./direction-dice.js"></script>
+</Layout>
