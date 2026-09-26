@@ -2,12 +2,13 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import serviceWorker from './integrations/sw.mjs';
+import conversationRoulette from '@present/conversation-roulette';
 import oneQuestion from '@present/one-question';
 import tablePact from '@present/table-pact';
 
 // Tools register themselves as Astro integrations that inject a route each.
 // Add a tool here after creating it in tools/<name>/.
-const toolIntegrations = [tablePact(), oneQuestion()];
+const toolIntegrations = [tablePact(), oneQuestion(), conversationRoulette()];
 
 const base = process.env.BASE_PATH || '/';
 const site = process.env.SITE_URL || 'https://mohitagw15856.github.io';

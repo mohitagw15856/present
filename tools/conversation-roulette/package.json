@@ -1,0 +1,11 @@
+{
+  "name": "@present/conversation-roulette",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pick a depth, tap for a question, answer out loud. Tracks nothing.",
+  "exports": { ".": "./index.mjs" },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

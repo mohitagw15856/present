@@ -10,3 +10,4 @@ All notable changes to this project are documented here. The format follows [Kee
 - Landing page with manifesto and tool cards; philosophy page.
 - Table Pact: shared table timer with QR join, pick-up detection, forfeit summary.
 - One Question: deterministic daily prompt with three “another”s; 150-prompt bank in data/questions.json.
+- Conversation Roulette: depth picker, shuffled no-repeat deck, nothing stored.

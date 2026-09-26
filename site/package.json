@@ -15,6 +15,7 @@
     "@tailwindcss/vite": "^4.0.0",
     "tailwindcss": "^4.0.0",
     "@present/table-pact": "workspace:*",
-    "@present/one-question": "workspace:*"
+    "@present/one-question": "workspace:*",
+    "@present/conversation-roulette": "workspace:*"
   }
 }
