@@ -1,0 +1,13 @@
+{
+  "name": "@present/pass-the-parcel",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A face-down prompt you may only read after handing the phone to your left.",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "@present/shared": "workspace:*"
+  }
+}

@@ -1,0 +1,23 @@
+---
+import Layout from '@present/shared/Layout.astro';
+---
+<Layout title="Pass the Parcel" description="A face-down prompt you may only read after handing the phone to your left." tool>
+  <div id="app" class="min-h-[70dvh] flex flex-col">
+    <p class="eyebrow">Pass the Parcel</p>
+    <section data-view="down" class="flex-1 flex flex-col justify-center gap-8">
+      <div class="card p-8 sm:p-10 text-center">
+        <p class="display text-3xl sm:text-4xl">Hand the phone to the person on your left.</p>
+        <p class="mt-4 text-muted text-lg">When it is in their hands, they tap.</p>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-5" data-action="go">I have it. Go.</button>
+    </section>
+    <section data-view="up" class="flex-1 flex flex-col" hidden>
+      <div class="flex-1 flex flex-col justify-center py-10">
+        <p class="display text-4xl sm:text-5xl leading-[1.15]" data-bind="q"></p>
+        <p class="mt-6 flex items-center gap-3 text-muted"><span class="inline-flex items-center rounded-full px-3 py-1 text-sm font-medium capitalize" data-bind="pill"></span> Answer it out loud.</p>
+      </div>
+      <button type="button" class="btn btn-primary text-lg py-4" data-action="down">Face down. Pass it on.</button>
+    </section>
+  </div>
+  <script src="./pass-the-parcel.js"></script>
+</Layout>
