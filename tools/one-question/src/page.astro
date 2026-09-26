@@ -3,7 +3,10 @@ import Layout from '@present/shared/Layout.astro';
 ---
 <Layout title="One Question" description="One conversation prompt per day, the same one for everyone. Read it aloud." tool>
   <div class="min-h-[70dvh] flex flex-col">
-    <p class="eyebrow">One Question · <time data-bind="date"></time></p>
+    <div class="flex items-center justify-between gap-3">
+      <p class="eyebrow">One Question · <time data-bind="date"></time></p>
+      <label data-lang-wrap class="text-muted text-sm inline-flex items-center gap-2"><span class="sr-only">Language</span><select id="lang" class="field min-h-11 py-2 w-auto text-sm"></select></label>
+    </div>
 
     <div class="flex-1 flex flex-col justify-center py-10 sm:py-16">
       <p class="display text-4xl sm:text-6xl leading-[1.15]" data-bind="question" aria-live="polite">&nbsp;</p>

@@ -1,4 +1,6 @@
 import { localDateKey, questionFor } from '@present/shared/questions';
+import { getLang, bankFor, mountLanguageSwitch } from '@present/shared/languages';
+let bank = bankFor(getLang());
 
 const LIMIT = 3;
 const dateKey = localDateKey();
@@ -36,7 +38,7 @@ bind('date').textContent = new Date().toLocaleDateString(undefined, {
 bind('date').setAttribute('datetime', dateKey);
 
 function render() {
-  const q = questionFor(dateKey, state.step);
+  const q = questionFor(dateKey, state.step, bank);
   bind('question').textContent = q.text;
   const d = bind('depth');
   d.textContent = q.depth;
@@ -56,7 +58,9 @@ another.addEventListener('click', () => {
   if (state.step >= LIMIT) return;
   state = { date: dateKey, step: state.step + 1 };
   save(state);
-  render();
+  mountLanguageSwitch(document.querySelector('#lang'), (code) => { bank = bankFor(code); render(); });
+render();
 });
 
+mountLanguageSwitch(document.querySelector('#lang'), (code) => { bank = bankFor(code); render(); });
 render();

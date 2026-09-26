@@ -1,0 +1,602 @@
+[
+  {
+    "text": "¿Qué has comido hoy que repetirías mañana con gusto?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué es lo mejor que ves desde donde estás sentado?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué tarea pequeña disfrutas en secreto?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué olor te lleva directo a la infancia?",
+    "depth": "light"
+  },
+  {
+    "text": "Si solo pudieras conservar una aplicación en el móvil, ¿cuál se queda?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué fue lo último que te hizo reír a carcajadas?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué pides en una cafetería donde nunca has estado?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué canción pondrías para despertar a todos en esta mesa?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué palabra te encanta por cómo suena?",
+    "depth": "light"
+  },
+  {
+    "text": "¿En qué eres extrañamente bueno?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál era tu juguete favorito y qué fue de él?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué estación del año te sienta mejor y por qué?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué comida rechazabas de pequeño y ahora te encanta?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué es lo más útil que tienes y que costó menos que un café?",
+    "depth": "light"
+  },
+  {
+    "text": "¿A dónde llevarías primero a alguien que visita tu ciudad?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué costumbre has copiado de un amigo?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué es lo primero que haces al llegar a casa?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Té, café o ninguno, y cómo lo tomas?",
+    "depth": "light"
+  },
+  {
+    "text": "¿A qué animal dice la gente que te pareces?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué película citas demasiado?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál es el mejor regalo que has hecho?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué querías ser a los siete años?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál sería tu canción de entrada?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué lugar suena aburrido pero resultó maravilloso?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué plato cocinarías para todos los de esta mesa?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué regla de tu casa les parece rara a las visitas?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuánto tiempo has pasado sin móvil a propósito, como máximo?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué llevas siempre en la maleta y nunca usas?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál es tu forma favorita de perder una tarde sin pantallas?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Quién es la persona más graciosa que conoces y qué hace?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué cosa pequeña te mejora el humor al instante?",
+    "depth": "light"
+  },
+  {
+    "text": "¿En qué juego de mesa ganas siempre?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué es lo más raro que hay ahora en tu nevera?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué prenda tienes desde hace más de diez años?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué idioma aprenderías mañana si no costara esfuerzo?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál es tu primer recuerdo de un cumpleaños?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué trabajo probarías exactamente un día?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué habitación de tu casa te gusta más y a qué hora?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué sabes arreglar?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué tentempié te recuerda a una persona concreta?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué fue lo último que hiciste con las manos?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué sonido te resulta profundamente satisfactorio?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué es lo primero que notas en un lugar nuevo?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué tradición familiar no sabías que era poco común?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué curso del colegio recuerdas mejor y por qué?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué haces en un viaje largo de tren?",
+    "depth": "light"
+  },
+  {
+    "text": "Si esta mesa fuera un equipo, ¿cómo se llamaría?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Cuál es el mejor consejo que has ignorado?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Quién te enseñó a montar en bici y cómo fue?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Qué apodo has tenido y de dónde salió?",
+    "depth": "light"
+  },
+  {
+    "text": "¿Sobre qué has cambiado de opinión este año?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cuándo fue la última vez que te sentiste descansado de verdad?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué haces cuando no puedes dormir?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué cumplido recuerdas todavía años después?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué estás evitando ahora y qué haría falta para afrontarlo?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Con quién te gustaría hablar más a menudo?",
+    "depth": "real"
+  },
+  {
+    "text": "¿De qué estás orgulloso aunque nadie te haya felicitado?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué aprendiste en tu peor trabajo?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué amistad se apagó y qué te enseñó?",
+    "depth": "real"
+  },
+  {
+    "text": "¿En qué gastas dinero que a otros les parece una tontería?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué hábito te gustaría haber perdido dentro de un año?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué sorprendería más a tu yo de antes sobre tu vida ahora?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cuándo fue la última vez que hiciste algo por primera vez?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué es lo más amable que ha hecho por ti un desconocido?",
+    "depth": "real"
+  },
+  {
+    "text": "¿En qué eres mejor que hace cinco años?",
+    "depth": "real"
+  },
+  {
+    "text": "¿A qué todavía estás aprendiendo a decir no?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué decisión te alegra no haber tomado con prisa?",
+    "depth": "real"
+  },
+  {
+    "text": "¿A dónde vas cuando necesitas pensar?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué fue lo último que te hizo llorar?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué miedo se te ha pasado casi del todo?",
+    "depth": "real"
+  },
+  {
+    "text": "¿A quién de tu vida crees que no se le valora lo suficiente?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué te ayuda a volver a ser tú después de una semana dura?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué historia cuenta tu familia sobre ti que tú no recuerdas?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué guardas que probablemente deberías soltar?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cuándo cambiaste un plan por última vez porque alguien te necesitaba?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué habilidad admiras en alguien de esta mesa?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cómo sabes cuándo estás cansado y no solo ocupado?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué promesa te hiciste y cumpliste?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué profesor te marcó y lo sabe?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué harías con un día entero libre esta semana?",
+    "depth": "real"
+  },
+  {
+    "text": "¿De qué estabas seguro antes?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué parte del día sueles hacer con más prisa?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cuándo pediste perdón por última vez de verdad?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué consejo das a menudo pero te cuesta seguir?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué pequeño ritual sostiene tu semana?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Sobre qué te gustaría que te preguntaran más?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué canción ha cambiado de significado para ti con el tiempo?",
+    "depth": "real"
+  },
+  {
+    "text": "¿A qué lugar llevas tiempo queriendo volver?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué esperas con ilusión del próximo mes?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué te resulta fácil y a los demás parece costarles?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué momento de esta semana te gustaría guardar?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué querías hacer con tu vida a los dieciocho y cuánto te acercaste?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cómo te has sorprendido a ti mismo últimamente?",
+    "depth": "real"
+  },
+  {
+    "text": "¿A quién fue la última persona a la que escribiste una carta de verdad?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué le has perdonado a alguien?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué límite te alegra haber puesto?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué clase de persona mayor esperas ser?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Cuál es la mejor conversación que has tenido este año y con quién?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué haces solo porque tus padres lo hacían?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué te dirías a ti mismo hace exactamente un año?",
+    "depth": "real"
+  },
+  {
+    "text": "¿Qué esperas que digan de ti cuando no estás en la habitación?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué duelo llevas contigo del que casi nunca hablas?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuándo te has sentido más plenamente tú?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué crees ahora que no podrías haber creído hace diez años?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué pregunta te da miedo responder?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿A quién llamarías primero con una noticia terrible, y por qué a esa persona?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué te ha enseñado sobre ti querer a alguien?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Con qué parte de tu vida no has hecho las paces todavía?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué harías distinto si nadie fuera a saberlo nunca?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuándo te sentiste por última vez visto de verdad por alguien?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué intentas demostrar, y a quién?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué no has dicho nunca en voz alta?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cómo es una buena vida para ti, dicho en pocas palabras?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué cualidades de tus padres esperas conservar y cuáles dejar atrás?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué es lo más difícil que has tenido que aceptar?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿En qué es lo que más miedo te da convertirte?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Dónde sientes que perteneces de verdad?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Por qué te gustaría que te recordara una persona en concreto?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué versión de tu vida imaginas a veces?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuándo has sido valiente sin que nadie lo notara?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué les debes a quienes te criaron?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿De qué te avergonzabas y ya te has perdonado?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué crees que pasa después de morir, y cómo cambia eso tu forma de vivir?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Quién te hizo daño de una manera que acabó haciéndote mejor?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Por qué lucharías, si llegara el momento?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué es el amor, con tus palabras, y cómo ha cambiado tu respuesta?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿A qué te aferras que te está frenando?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuándo sentiste asombro por última vez?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué es lo más honesto que puedes decir sobre dónde estás ahora?",
+    "depth": "deep"
+  },
+  {
+    "text": "Si supieras que te queda un año, ¿qué dejarías de hacer mañana?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿De qué necesitas más, y qué te impide pedirlo?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuya aprobación sigues buscando, incluso ahora?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cómo sería tu vida si confiaras en ti por completo?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué verdad sobre tu familia tardaste años en ver?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cómo te llevas con tu propio cuerpo en este momento?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué deseas que sientes que no tienes permiso para desear?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuándo entendiste por primera vez que tus padres eran personas corrientes?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué has perdido que sigues buscando?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Para qué crees que estás aquí?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué bondad recibiste que nunca has devuelto?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué te cuesta más perdonarte?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué sabes de ti que desearías que no fuera cierto?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿A quién echas de menos, y qué le dirías ahora mismo?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué quieres de las personas de esta mesa?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué te da miedo admitir que has abandonado?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Cuál es la diferencia entre quien eres y quien muestras?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué te ha pedido este año?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué significa hogar para ti ahora, comparado con cuando eras niño?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Por qué te gustaría ser perdonado?",
+    "depth": "deep"
+  },
+  {
+    "text": "¿Qué esperas que sea verdad?",
+    "depth": "deep"
+  }
+]

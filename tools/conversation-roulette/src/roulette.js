@@ -1,4 +1,7 @@
 import { byDepth, shuffled } from '@present/shared/questions';
+import { getLang, bankFor, mountLanguageSwitch } from '@present/shared/languages';
+let bank = bankFor(getLang());
+mountLanguageSwitch(document.querySelector('#lang'), (code) => { bank = bankFor(code); });
 
 const depthStyle = {
   light: 'bg-sky-soft text-sky-ink',
@@ -17,7 +20,7 @@ let depth = 'any';
 
 function start(d) {
   depth = d;
-  deck = shuffled(byDepth(d));
+  deck = shuffled(byDepth(d, bank));
   bind('depth-label').textContent = depthLabel[d];
   bind('question').textContent = 'Tap anywhere for the first question.';
   bind('pill').hidden = true;
@@ -25,7 +28,7 @@ function start(d) {
 }
 
 function next() {
-  if (deck.length === 0) deck = shuffled(byDepth(depth));
+  if (deck.length === 0) deck = shuffled(byDepth(depth, bank));
   const q = deck.pop();
   bind('question').textContent = q.text;
   const pill = bind('pill');
