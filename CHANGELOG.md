@@ -11,6 +11,8 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ### Added
 
+- Twenty more tools, grouped on the landing page: Story Stack, Two Truths, Toast Generator, Silent Minute, Pass the Parcel, Bench, Direction Dice, Sky Check, Post It, Table Talk Placemats, Guest Book, Screen-Free Coupons, Fridge Question, Charger Station Kit, Bedtime Handover, House Rules Card, Presence Kit for Venues, Print Pack (build-time combined PDF), Question of the Week (GitHub Action), Translations (Spanish bank + language switch).
+- Shared PDF helpers (`@present/shared/pdf`) and a lazy jsPDF download helper; every printable draws onto an existing document so the print pack can stitch them.
 - Monorepo scaffold: pnpm workspaces, Astro site, shared design tokens, service worker, GitHub Pages workflow.
 - Landing page with manifesto and tool cards; philosophy page.
 - Table Pact: shared table timer with QR join, pick-up detection, forfeit summary.

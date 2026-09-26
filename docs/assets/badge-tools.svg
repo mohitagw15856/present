@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="89" height="24" role="img" aria-label="tools: 11">
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="24" role="img" aria-label="tools: 31">
   <rect width="89" height="24" rx="12" fill="#f5efe4"/>
   <rect x="55" width="34" height="24" rx="12" fill="#ebcaca"/>
   <rect x="55" width="12" height="24" fill="#ebcaca"/>
   <g font-family="Inter,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="500">
     <text x="27" y="16" text-anchor="middle" fill="#7a736a">tools</text>
-    <text x="72" y="16" text-anchor="middle" fill="#2b2823">11</text>
+    <text x="72" y="16" text-anchor="middle" fill="#2b2823">31</text>
   </g>
 </svg>

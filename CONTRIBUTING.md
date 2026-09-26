@@ -41,6 +41,14 @@ Edit [`data/table-quiz.json`](data/table-quiz.json):
 
 Every answer must be a person at the table. Keep it safe to ask a mixed group of friends, family and colleagues; the fun is in the owning-up, not the exposure.
 
+### Add a translation
+
+Copy `data/questions.json` to `data/questions.<language-code>.json`, translate every `text` field and **keep the order and the `depth` values**, so that One Question shows the same prompt in every language on a given day. The language appears in the switch automatically. Partial files are not accepted, because One Question needs the same bank length everywhere; if you want to start one, open a draft pull request and others can help finish it.
+
+### Add a first line, a topic or a letter prompt
+
+`data/story-lines.json` (end mid-sentence), `data/two-truths-topics.json` (a noun phrase everyone has a story about) and `data/letter-prompts.json` (start with "Write to…").
+
 ### Add a Grey Mode setup
 
 Add a section to [`tools/grey-mode/README.md`](tools/grey-mode/README.md) following its own contributing note. Screenshots are welcome; put them in `tools/grey-mode/screenshots/`.
